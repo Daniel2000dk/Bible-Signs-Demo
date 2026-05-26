@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex items-center pt-20 pb-10 overflow-hidden"
+      className="relative pt-28 pb-12 md:pt-32 md:pb-16 overflow-hidden"
       style={{
         background:
           'radial-gradient(ellipse 80% 70% at 70% 40%, #EDE5D5 0%, #F5F0E8 65%)',
@@ -106,8 +106,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-bs-offwhite to-transparent pointer-events-none" />
     </section>
   )
 }
