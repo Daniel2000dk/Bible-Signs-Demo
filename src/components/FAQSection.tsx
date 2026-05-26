@@ -67,17 +67,17 @@ export default function FAQSection() {
   const toggle = (id: string) => setOpenId(prev => (prev === id ? null : id))
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-bs-sand/20">
+    <section id="faq" className="py-14 md:py-20 bg-bs-sand/20">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-14">
 
           {/* Left: header */}
           <div className="flex flex-col gap-4 lg:sticky lg:top-28 lg:self-start">
             <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold">
               Veelgestelde vragen
             </span>
-            <h2 className="font-serif text-[32px] md:text-[40px] font-bold text-bs-black leading-tight">
+            <h2 className="font-serif text-[26px] md:text-[34px] font-bold text-bs-black leading-tight">
               Alles wat<br />
               je wil weten.
             </h2>

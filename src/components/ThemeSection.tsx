@@ -61,16 +61,16 @@ function ThemeCard({ theme }: { theme: Theme }) {
 
 export default function ThemeSection() {
   return (
-    <section id="themas" className="py-24 md:py-32 bg-bs-offwhite">
+    <section id="themas" className="py-14 md:py-20 bg-bs-offwhite">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         {/* Section header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <div className="flex flex-col gap-3">
             <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold">
               Vind jouw thema
             </span>
-            <h2 className="font-serif text-[36px] md:text-[48px] font-bold text-bs-black leading-tight">
+            <h2 className="font-serif text-[30px] md:text-[40px] font-bold text-bs-black leading-tight">
               Elke poster<br />
               vertelt een verhaal.
             </h2>

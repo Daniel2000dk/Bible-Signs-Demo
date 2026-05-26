@@ -59,17 +59,17 @@ export default function CustomizerPreview() {
   }
 
   return (
-    <section id="personaliseer" className="py-24 md:py-32 bg-bs-offwhite">
+    <section id="personaliseer" className="py-14 md:py-20 bg-bs-offwhite">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         {/* Section header */}
-        <div className="flex flex-col gap-3 mb-14">
+        <div className="flex flex-col gap-2 mb-10">
           <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold">
             Personaliseer
           </span>
-          <h2 className="font-serif text-[36px] md:text-[48px] font-bold text-bs-black leading-tight">
-            Van Bijbeltekst<br />
-            naar poster in 3 stappen.
+          <h2 className="font-serif text-[28px] md:text-[38px] font-bold text-bs-black leading-tight">
+            Van Bijbeltekst naar poster<br />
+            in 3 stappen.
           </h2>
           <p className="text-[14px] text-bs-dark max-w-md leading-relaxed">
             Kies je vers, je kleur en je lijst. Zie het direct live — zo ziet jouw poster eruit.
@@ -77,7 +77,7 @@ export default function CustomizerPreview() {
         </div>
 
         {/* Main layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
           {/* ── LEFT: Controls ── */}
           <div className="flex flex-col gap-6">
@@ -237,7 +237,7 @@ export default function CustomizerPreview() {
           {/* ── RIGHT: Live poster preview ── */}
           <div className="flex flex-col items-center gap-4 lg:sticky lg:top-28">
             <div
-              className="relative flex items-center justify-center w-full py-16"
+              className="relative flex items-center justify-center w-full py-10"
               style={{
                 backgroundColor:
                   currentDesign.background === '#1A1A1A' || currentDesign.background === '#2F3A32'

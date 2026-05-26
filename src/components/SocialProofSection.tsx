@@ -24,11 +24,11 @@ const quotes = [
 
 export default function SocialProofSection() {
   return (
-    <section className="py-24 md:py-32 bg-bs-offwhite border-t border-bs-sand">
+    <section className="py-14 md:py-20 bg-bs-offwhite border-t border-bs-sand">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         {/* Section header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div className="flex flex-col gap-3">
             <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold">
               Eerste reacties
@@ -72,7 +72,7 @@ export default function SocialProofSection() {
         </div>
 
         {/* Bottom tagline */}
-        <div className="mt-14 flex flex-col sm:flex-row items-center justify-between gap-4 pt-10 border-t border-bs-sand">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-bs-sand">
           <p className="font-serif text-[18px] md:text-[22px] font-bold text-bs-black italic">
             &ldquo;Geloof dat je kamer versterkt.&rdquo;
           </p>

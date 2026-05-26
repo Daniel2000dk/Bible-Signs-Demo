@@ -16,7 +16,7 @@ export default function CollectiePage() {
       <Header />
 
       {/* Page header */}
-      <div className="pt-36 pb-16 bg-bs-offwhite border-b border-bs-sand">
+      <div className="pt-28 pb-10 bg-bs-offwhite border-b border-bs-sand">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold block mb-4">
             De collectie

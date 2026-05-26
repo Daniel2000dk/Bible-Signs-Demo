@@ -12,18 +12,17 @@ const bestSellers = [
 
 export default function BestSellers() {
   return (
-    <section className="py-24 md:py-32 bg-bs-sand/25">
+    <section className="py-14 md:py-20 bg-bs-sand/25">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div className="flex flex-col gap-2">
             <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold">
               Best sellers
             </span>
-            <h2 className="font-serif text-[32px] md:text-[44px] font-bold text-bs-black leading-tight">
-              De meest gekozen<br />
-              designs.
+            <h2 className="font-serif text-[28px] md:text-[38px] font-bold text-bs-black leading-tight">
+              De meest gekozen designs.
             </h2>
           </div>
           <Link
@@ -44,7 +43,7 @@ export default function BestSellers() {
             >
               {/* Poster area — generous padding for editorial feel */}
               <div
-                className="relative flex items-center justify-center py-12 px-6 overflow-hidden"
+                className="relative flex items-center justify-center py-8 px-5 overflow-hidden"
                 style={{ backgroundColor: product.poster.background }}
               >
                 {product.featured && !product.isNew && (
@@ -92,7 +91,7 @@ export default function BestSellers() {
         </div>
 
         {/* Bottom note */}
-        <div className="mt-14 pt-8 border-t border-bs-sand flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 pt-6 border-t border-bs-sand flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[13px] text-bs-dark">
             Beschikbaar in Nederlands en Engels · Kies jouw Bijbelvertaling in de customizer
           </p>

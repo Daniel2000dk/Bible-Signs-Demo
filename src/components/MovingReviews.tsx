@@ -94,8 +94,8 @@ export default function MovingReviews() {
   const duplicated = [...reviews, ...reviews]
 
   return (
-    <section className="py-20 md:py-24 bg-bs-offwhite border-t border-bs-sand overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 mb-12">
+    <section className="py-12 md:py-16 bg-bs-offwhite border-t border-bs-sand overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 mb-8">
         <div className="flex flex-col md:flex-row md:items-end gap-4 justify-between">
           <div className="flex flex-col gap-2">
             <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold">

@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden"
+      className="relative min-h-[90vh] flex items-center pt-20 pb-10 overflow-hidden"
       style={{
         background:
           'radial-gradient(ellipse 80% 70% at 70% 40%, #EDE5D5 0%, #F5F0E8 65%)',
@@ -28,10 +28,10 @@ export default function Hero() {
       />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* ── LEFT: Text content ── */}
-          <div className="flex flex-col gap-8 lg:gap-10">
+          <div className="flex flex-col gap-6 lg:gap-7">
 
             {/* Launch label */}
             <div className="inline-flex items-center gap-2 self-start">

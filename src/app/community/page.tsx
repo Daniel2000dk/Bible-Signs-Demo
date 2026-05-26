@@ -16,7 +16,7 @@ export default function CommunityPage() {
       <Header />
 
       {/* Page header */}
-      <div className="pt-36 pb-16 bg-bs-green text-bs-offwhite">
+      <div className="pt-28 pb-10 bg-bs-green text-bs-offwhite">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold block mb-4">
             Community

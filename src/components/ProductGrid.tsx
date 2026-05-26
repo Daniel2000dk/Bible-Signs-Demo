@@ -4,18 +4,17 @@ import { products } from '@/data/products'
 
 export default function ProductGrid() {
   return (
-    <section id="shop" className="py-24 md:py-32 bg-bs-sand/30">
+    <section id="shop" className="py-14 md:py-20 bg-bs-sand/30">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         {/* Section header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+          <div className="flex flex-col gap-2">
             <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold">
               Alle designs
             </span>
-            <h2 className="font-serif text-[36px] md:text-[48px] font-bold text-bs-black leading-tight">
-              De volledige<br />
-              collectie.
+            <h2 className="font-serif text-[28px] md:text-[38px] font-bold text-bs-black leading-tight">
+              De volledige collectie.
             </h2>
           </div>
           <div className="flex flex-col gap-3 items-start md:items-end">
@@ -27,14 +26,14 @@ export default function ProductGrid() {
         </div>
 
         {/* Products grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
 
         {/* CTA bar */}
-        <div className="mt-16 pt-10 border-t border-bs-sand flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 pt-6 border-t border-bs-sand flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[14px] text-bs-dark">
             Meer designs in de maak. Word community-lid en help de volgende collectie vormen.
           </p>

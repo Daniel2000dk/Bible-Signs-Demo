@@ -6,12 +6,12 @@ export default function MissionCommunityTeaser() {
       <div className="grid grid-cols-1 lg:grid-cols-2">
 
         {/* Left: Mission — dark */}
-        <div className="bg-bs-black text-bs-offwhite py-20 md:py-24 px-8 md:px-16 flex flex-col justify-between gap-12 min-h-[420px]">
+        <div className="bg-bs-black text-bs-offwhite py-14 md:py-16 px-8 md:px-12 flex flex-col justify-between gap-8 min-h-[340px]">
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-bs-gold">
             Onze missie
           </span>
           <div className="flex flex-col gap-6">
-            <blockquote className="font-serif text-[24px] md:text-[30px] lg:text-[28px] xl:text-[32px] font-bold leading-[1.15] text-bs-offwhite">
+            <blockquote className="font-serif text-[21px] md:text-[25px] lg:text-[24px] xl:text-[27px] font-bold leading-[1.15] text-bs-offwhite">
               "Gods Woord hoeft niet te verstoppen
               achter je smaak.{' '}
               <em className="not-italic text-bs-gold">Jij ook niet.</em>"
@@ -34,12 +34,12 @@ export default function MissionCommunityTeaser() {
         </div>
 
         {/* Right: Community — green */}
-        <div className="bg-bs-green text-bs-offwhite py-20 md:py-24 px-8 md:px-16 flex flex-col justify-between gap-12 min-h-[420px]">
+        <div className="bg-bs-green text-bs-offwhite py-14 md:py-16 px-8 md:px-12 flex flex-col justify-between gap-8 min-h-[340px]">
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-bs-gold">
             Community
           </span>
           <div className="flex flex-col gap-6">
-            <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[28px] xl:text-[32px] font-bold leading-[1.15] text-bs-offwhite">
+            <h2 className="font-serif text-[21px] md:text-[25px] lg:text-[24px] xl:text-[27px] font-bold leading-[1.15] text-bs-offwhite">
               Word onderdeel van de{' '}
               <em className="not-italic text-bs-gold">beweging.</em>
             </h2>

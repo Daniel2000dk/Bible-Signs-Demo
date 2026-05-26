@@ -12,8 +12,8 @@ export default function CommunitySection() {
   }
 
   return (
-    <section id="community" className="py-28 md:py-40 bg-bs-green text-bs-offwhite overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6 md:px-10 text-center flex flex-col items-center gap-12">
+    <section id="community" className="py-16 md:py-24 bg-bs-green text-bs-offwhite overflow-hidden">
+      <div className="max-w-4xl mx-auto px-6 md:px-10 text-center flex flex-col items-center gap-8">
 
         {/* Label */}
         <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-bs-gold">
@@ -22,7 +22,7 @@ export default function CommunitySection() {
 
         {/* Headline */}
         <div className="flex flex-col gap-4">
-          <h2 className="font-serif text-[38px] md:text-[52px] lg:text-[60px] font-bold leading-[1.05] tracking-tight text-bs-offwhite">
+          <h2 className="font-serif text-[32px] md:text-[44px] lg:text-[52px] font-bold leading-[1.05] tracking-tight text-bs-offwhite">
             Word onderdeel<br />
             van de{' '}
             <em className="not-italic text-bs-gold">beweging.</em>

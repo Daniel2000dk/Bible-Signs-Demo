@@ -12,7 +12,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
       {/* Poster mockup */}
       <div
-        className="relative flex items-end justify-center overflow-hidden py-8 px-6"
+        className="relative flex items-end justify-center overflow-hidden py-6 px-5"
         style={{ backgroundColor: product.poster.background }}
       >
         {/* Badge */}

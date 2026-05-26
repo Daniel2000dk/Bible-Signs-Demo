@@ -1,7 +1,7 @@
 export default function MissionSection() {
   return (
-    <section id="missie" className="py-28 md:py-40 bg-bs-black text-bs-offwhite overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6 md:px-10 flex flex-col items-center text-center gap-14">
+    <section id="missie" className="py-16 md:py-24 bg-bs-black text-bs-offwhite overflow-hidden">
+      <div className="max-w-4xl mx-auto px-6 md:px-10 flex flex-col items-center text-center gap-10">
 
         {/* Label */}
         <div className="flex flex-col items-center gap-4">
@@ -13,7 +13,7 @@ export default function MissionSection() {
 
         {/* Main quote */}
         <blockquote>
-          <p className="font-serif text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-[1.15] tracking-tight text-bs-offwhite">
+          <p className="font-serif text-[24px] md:text-[30px] lg:text-[36px] font-bold leading-[1.15] tracking-tight text-bs-offwhite">
             Gods Woord hoeft niet te verstoppen<br className="hidden md:block" />{' '}
             achter je smaak.{' '}
             <em className="not-italic text-bs-gold">Jij ook niet.</em>
