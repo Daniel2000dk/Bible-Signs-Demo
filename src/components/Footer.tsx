@@ -1,26 +1,26 @@
 import Link from 'next/link'
 
 const shopLinks = [
-  { label: 'Alle designs',      href: '#shop'        },
-  { label: 'Identiteit',        href: '#themas'      },
-  { label: 'Rust & Vrede',      href: '#themas'      },
-  { label: 'Kracht & Moed',     href: '#themas'      },
-  { label: 'Doel & Richting',   href: '#themas'      },
+  { label: 'Alle designs',    href: '/collectie'        },
+  { label: 'Identiteit',      href: '/collectie'        },
+  { label: 'Rust & Vrede',    href: '/collectie'        },
+  { label: 'Kracht & Moed',   href: '/collectie'        },
+  { label: 'Doel & Richting', href: '/collectie'        },
 ]
 
 const brandLinks = [
-  { label: 'Onze missie',   href: '#missie'    },
-  { label: 'Zaaimodel',     href: '#missie'    },
-  { label: 'Community',     href: '#community' },
-  { label: 'Personaliseer', href: '#personaliseer' },
-  { label: 'FAQ',           href: '#faq'       },
+  { label: 'Onze missie',   href: '/onze-missie' },
+  { label: 'Zaaimodel',     href: '/onze-missie' },
+  { label: 'Community',     href: '/community'   },
+  { label: 'Personaliseer', href: '/collectie'   },
+  { label: 'FAQ',           href: '/community'   },
 ]
 
 const legalLinks = [
-  { label: 'Privacybeleid',   href: '#' },
+  { label: 'Privacybeleid',        href: '#' },
   { label: 'Algemene voorwaarden', href: '#' },
-  { label: 'Cookiebeleid',    href: '#' },
-  { label: 'Retourbeleid',    href: '#' },
+  { label: 'Cookiebeleid',         href: '#' },
+  { label: 'Retourbeleid',         href: '#' },
 ]
 
 export default function Footer() {
@@ -43,7 +43,7 @@ export default function Footer() {
               Premium christelijke posters die jongeren écht willen ophangen.
             </p>
             <p className="font-serif text-[13px] italic text-bs-gold/70">
-              "Geloof dat je kamer versterkt."
+              &ldquo;Geloof dat je kamer versterkt.&rdquo;
             </p>
 
             {/* Seed badge */}
@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Shop links */}
           <div className="flex flex-col gap-4">
             <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-bs-gold">
-              Shop
+              Collectie
             </p>
             <nav className="flex flex-col gap-2.5">
               {shopLinks.map(({ label, href }) => (
@@ -99,8 +99,8 @@ export default function Footer() {
             <div className="flex flex-col gap-2.5">
               {[
                 { label: 'Instagram', href: '#' },
-                { label: 'TikTok',   href: '#' },
-                { label: 'Pinterest',href: '#' },
+                { label: 'TikTok',    href: '#' },
+                { label: 'Pinterest', href: '#' },
               ].map(({ label, href }) => (
                 <a
                   key={label}
@@ -109,7 +109,7 @@ export default function Footer() {
                 >
                   {label}
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5" className="opacity-40">
-                    <path d="M2 8 8 2M5 2h3v3"/>
+                    <path d="M2 8 8 2M5 2h3v3" />
                   </svg>
                 </a>
               ))}

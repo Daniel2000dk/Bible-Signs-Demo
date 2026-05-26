@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </span>
         )}
         {product.featured && !product.isNew && (
-          <span className="absolute top-3 right-3 text-[9px] font-semibold tracking-widest uppercase px-2 py-1 bg-bs-black text-bs-offwhite">
+          <span className="absolute top-3 right-3 text-[9px] font-semibold tracking-widest uppercase px-2 py-1 border border-bs-gold/40 text-bs-gold">
             Populair
           </span>
         )}
@@ -46,23 +46,23 @@ export default function ProductCard({ product }: ProductCardProps) {
           <span className="text-[13px] font-semibold text-bs-black">
             Vanaf €{product.priceFrom}
           </span>
-          <span className="text-[11px] text-bs-dark">
-            · Met lijst €{product.priceWithFrame}
+          <span className="text-[11px] text-bs-dark/60">
+            · met lijst €{product.priceWithFrame}
           </span>
         </div>
 
         {/* CTA */}
         <Link
-          href={`#shop`}
+          href="/collectie"
           className="mt-1 inline-flex items-center gap-1.5 text-[12px] font-medium text-bs-black group-hover:text-bs-gold transition-colors duration-200"
         >
-          Bekijk ontwerp
+          Personaliseer dit design
           <svg
             width="11" height="11" viewBox="0 0 11 11" fill="none"
             stroke="currentColor" strokeWidth="1.8"
             className="group-hover:translate-x-0.5 transition-transform duration-200"
           >
-            <path d="M1 5.5h9M5.5 1l4.5 4.5L5.5 10"/>
+            <path d="M1 5.5h9M5.5 1l4.5 4.5L5.5 10" />
           </svg>
         </Link>
       </div>

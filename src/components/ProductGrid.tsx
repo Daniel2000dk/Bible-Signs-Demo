@@ -11,24 +11,18 @@ export default function ProductGrid() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div className="flex flex-col gap-3">
             <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold">
-              De collectie
+              Alle designs
             </span>
             <h2 className="font-serif text-[36px] md:text-[48px] font-bold text-bs-black leading-tight">
-              Ontdek<br />
-              de designs.
+              De volledige<br />
+              collectie.
             </h2>
           </div>
           <div className="flex flex-col gap-3 items-start md:items-end">
-            <p className="text-[15px] text-bs-dark max-w-xs leading-relaxed md:text-right">
-              Elke poster is getypografeerd met Bijbelteksten die spreken.
-              Kies jouw waarheid.
+            <p className="text-[14px] text-bs-dark max-w-xs leading-relaxed md:text-right">
+              Elk design beschikbaar in meerdere kleuren, formaten en lijsten.
+              In Nederlands en Engels.
             </p>
-            <Link
-              href="#shop"
-              className="text-[13px] font-medium text-bs-black border-b border-bs-black/30 hover:border-bs-gold hover:text-bs-gold pb-0.5 transition-all duration-200"
-            >
-              Alles bekijken →
-            </Link>
           </div>
         </div>
 
@@ -42,15 +36,15 @@ export default function ProductGrid() {
         {/* CTA bar */}
         <div className="mt-16 pt-10 border-t border-bs-sand flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[14px] text-bs-dark">
-            Nog meer designs in de maak. Word community-lid en stem mee over de volgende collectie.
+            Meer designs in de maak. Word community-lid en help de volgende collectie vormen.
           </p>
           <Link
-            href="#community"
+            href="/community"
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-bs-black text-bs-offwhite text-[13px] font-medium tracking-wide hover:bg-bs-gold hover:text-bs-black transition-all duration-200"
           >
-            Stem mee
+            Help de collectie vormen
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <path d="M2 6h8M6 2l4 4-4 4"/>
+              <path d="M2 6h8M6 2l4 4-4 4" />
             </svg>
           </Link>
         </div>

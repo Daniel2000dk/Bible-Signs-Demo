@@ -8,7 +8,7 @@ export const themes: Theme[] = [
     title: 'Identiteit in Christus',
     description: 'Ontdek wie je bent in Gods ogen. Posters die je dagelijks herinneren aan je waarde en roeping.',
     poster: posterVariants[0],
-    href: '#shop',
+    href: '/collectie',
   },
   {
     id: 'rust',
@@ -16,7 +16,7 @@ export const themes: Theme[] = [
     title: 'Rust & Vrede',
     description: 'Vind rust in Zijn aanwezigheid. Designs die stilte en zekerheid uitstralen in elke ruimte.',
     poster: posterVariants[1],
-    href: '#shop',
+    href: '/collectie',
   },
   {
     id: 'kracht',
@@ -24,7 +24,7 @@ export const themes: Theme[] = [
     title: 'Kracht & Moed',
     description: 'Sta sterk in geloof, elke dag opnieuw. Krachtige Bijbelteksten die je herinneren aan Gods kracht in jou.',
     poster: posterVariants[2],
-    href: '#shop',
+    href: '/collectie',
   },
   {
     id: 'doel',
@@ -32,6 +32,6 @@ export const themes: Theme[] = [
     title: 'Doel & Richting',
     description: 'Leef met focus en volg Zijn plan. Designs die richting geven aan wie je bent en wie je wordt.',
     poster: posterVariants[3],
-    href: '#shop',
+    href: '/collectie',
   },
 ]

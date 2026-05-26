@@ -23,6 +23,25 @@ const config: Config = {
       maxWidth: {
         '8xl': '1440px',
       },
+      keyframes: {
+        marquee: {
+          '0%':   { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        fadeUp: {
+          from: { opacity: '0', transform: 'translateY(20px)' },
+          to:   { opacity: '1', transform: 'translateY(0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%':      { transform: 'translateY(-10px)' },
+        },
+      },
+      animation: {
+        marquee:   'marquee 35s linear infinite',
+        'fade-up': 'fadeUp 0.6s ease forwards',
+        float:     'float 5s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
