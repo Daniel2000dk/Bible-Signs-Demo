@@ -1,0 +1,60 @@
+import Link from 'next/link'
+import ProductCard from './ProductCard'
+import { products } from '@/data/products'
+
+export default function ProductGrid() {
+  return (
+    <section id="shop" className="py-24 md:py-32 bg-bs-sand/30">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+
+        {/* Section header */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+          <div className="flex flex-col gap-3">
+            <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-bs-gold">
+              De collectie
+            </span>
+            <h2 className="font-serif text-[36px] md:text-[48px] font-bold text-bs-black leading-tight">
+              Ontdek<br />
+              de designs.
+            </h2>
+          </div>
+          <div className="flex flex-col gap-3 items-start md:items-end">
+            <p className="text-[15px] text-bs-dark max-w-xs leading-relaxed md:text-right">
+              Elke poster is getypografeerd met Bijbelteksten die spreken.
+              Kies jouw waarheid.
+            </p>
+            <Link
+              href="#shop"
+              className="text-[13px] font-medium text-bs-black border-b border-bs-black/30 hover:border-bs-gold hover:text-bs-gold pb-0.5 transition-all duration-200"
+            >
+              Alles bekijken →
+            </Link>
+          </div>
+        </div>
+
+        {/* Products grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-12">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+
+        {/* CTA bar */}
+        <div className="mt-16 pt-10 border-t border-bs-sand flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[14px] text-bs-dark">
+            Nog meer designs in de maak. Word community-lid en stem mee over de volgende collectie.
+          </p>
+          <Link
+            href="#community"
+            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-bs-black text-bs-offwhite text-[13px] font-medium tracking-wide hover:bg-bs-gold hover:text-bs-black transition-all duration-200"
+          >
+            Stem mee
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <path d="M2 6h8M6 2l4 4-4 4"/>
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
