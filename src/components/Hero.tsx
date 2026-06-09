@@ -24,6 +24,8 @@ export default function Hero() {
         alt=""
         fill
         priority
+        quality={90}
+        sizes="100vw"
         style={{
           objectFit: 'cover',
           objectPosition: 'center center',
