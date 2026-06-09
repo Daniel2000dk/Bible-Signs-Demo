@@ -12,11 +12,11 @@ export default function Hero() {
       id="home"
       className="relative overflow-hidden flex flex-col"
       style={{
-        minHeight: '82vh',
+        minHeight: '78vh',
         paddingTop: 84,
         backgroundImage: 'url(/images/hero-bg.png)',
         backgroundSize: 'cover',
-        backgroundPosition: '68% center',
+        backgroundPosition: '74% 38%',
       }}
     >
       {/* ── Primary overlay: dark left → transparent right ── */}
@@ -54,7 +54,7 @@ export default function Hero() {
       {/* ── Content ── */}
       <div
         className="relative max-w-[1320px] mx-auto px-6 md:px-10 w-full flex flex-col justify-center"
-        style={{ minHeight: 'calc(82vh - 84px)', paddingTop: '4vh', paddingBottom: '5vh' }}
+        style={{ minHeight: 'calc(78vh - 84px)', paddingTop: '4vh', paddingBottom: '5vh' }}
       >
         <div className="flex flex-col gap-8 max-w-[540px] animate-fade-up">
 
