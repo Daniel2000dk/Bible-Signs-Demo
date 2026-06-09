@@ -14,9 +14,9 @@ export default function Hero() {
       className="relative overflow-hidden flex flex-col"
       style={{
         paddingTop: 84,
-        height: '78vh',
-        minHeight: 700,
-        maxHeight: 840,
+        aspectRatio: '2172 / 724',
+        minHeight: 560,
+        maxHeight: 900,
       }}
     >
       {/* ── Background image as absolute layer ── */}
@@ -27,7 +27,7 @@ export default function Hero() {
         priority
         style={{
           objectFit: 'cover',
-          objectPosition: '50% center',
+          objectPosition: 'center center',
           zIndex: 0,
         }}
       />
