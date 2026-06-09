@@ -11,112 +11,150 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-28 pb-20 md:pt-36 md:pb-28 lg:min-h-[760px] lg:flex lg:flex-col lg:justify-center overflow-hidden bg-[#F5F0E8]"
+      className="relative overflow-hidden flex flex-col justify-center"
+      style={{
+        paddingTop: 84,
+        minHeight: '100vh',
+        background:
+          'linear-gradient(150deg, #F8F4EC 0%, #F5F0E8 40%, #EEE7D8 100%)',
+      }}
     >
-      {/* Warm radial glow */}
+      {/* Subtle warm radial glow — right side pulls visual depth */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 75% 65% at 68% 28%, rgba(232,221,200,0.72) 0%, transparent 65%)',
+            'radial-gradient(ellipse 80% 75% at 72% 38%, rgba(232,220,196,0.60) 0%, transparent 65%)',
         }}
       />
 
-      {/* Subtle noise grain */}
+      {/* Premium noise grain */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.028]"
+        className="absolute inset-0 pointer-events-none"
         style={{
+          opacity: 0.022,
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
           backgroundSize: '256px 256px',
         }}
       />
 
-      <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_490px] xl:grid-cols-[1fr_540px] gap-14 lg:gap-16 items-center">
+      <div className="relative max-w-[1320px] mx-auto px-6 md:px-10 w-full py-16 md:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_510px] xl:grid-cols-[1fr_550px] gap-12 lg:gap-14 xl:gap-16 items-center">
 
-          {/* ── LEFT: Copy ── */}
+          {/* ─── LEFT: Editorial Copy ─── */}
           <div className="flex flex-col gap-7 animate-fade-up">
 
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-3 self-start">
-              <span className="w-5 h-px bg-[#C8A84B]" />
-              <span className="text-[10px] font-semibold tracking-[0.28em] uppercase text-[#C8A84B]">
+              <span
+                className="block shrink-0"
+                style={{
+                  width: 24,
+                  height: 1,
+                  background:
+                    'linear-gradient(90deg, #C8A84B 0%, rgba(200,168,75,0.4) 100%)',
+                }}
+              />
+              <span className="text-[10px] font-bold tracking-[0.32em] uppercase text-[#C8A84B]">
                 Premium Bijbelse Wanddecoratie
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="font-serif text-[50px] md:text-[62px] lg:text-[70px] xl:text-[84px] font-bold leading-[1.0] tracking-tight text-[#1A1A1A]">
+            <h1
+              className="font-serif font-bold tracking-tight text-[#1A1A1A] leading-[0.93]"
+              style={{ fontSize: 'clamp(48px, 6.2vw, 86px)' }}
+            >
               Maak{' '}
               <span
-                className="text-[#C8A84B]"
-                style={{ textShadow: '0 0 56px rgba(200,168,75,0.18)' }}
+                style={{
+                  color: '#C8A84B',
+                  textShadow: '0 2px 44px rgba(200,168,75,0.18)',
+                }}
               >
                 Gods Woord
               </span>
-              {' '}zichtbaar<br className="hidden sm:block" /> in jouw ruimte.
+              <br />
+              zichtbaar in
+              <br />
+              jouw ruimte.
             </h1>
 
             {/* Subtext */}
-            <p className="text-[16px] md:text-[18px] leading-relaxed text-[#4A4A4A] max-w-[440px]">
-              Premium Bijbelse posters die je dagelijks herinneren aan waarheid,
-              identiteit en rust in Christus.
+            <p className="text-[16px] md:text-[17px] leading-relaxed text-[#4A4A4A] max-w-[420px]">
+              Premium Bijbelse posters die je dagelijks herinneren aan
+              waarheid, identiteit en rust in Christus.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+            <div className="flex flex-col sm:flex-row gap-3.5 items-start sm:items-center">
 
-              {/* Primary — gold pill with shine sweep */}
+              {/* Primary — gold pill */}
               <Link
                 href="#customizer"
-                className="group relative inline-flex items-center justify-center gap-3 px-9 min-h-[58px] rounded-full bg-[#C8A84B] text-[#1A1A1A] text-[14px] font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_14px_52px_rgba(200,168,75,0.55)]"
+                className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#C8A84B] text-[#1A1A1A] text-[14px] font-bold tracking-wide transition-all duration-300 hover:-translate-y-[2px] shadow-[0_8px_28px_rgba(200,168,75,0.32)] hover:shadow-[0_18px_58px_rgba(200,168,75,0.65)]"
+                style={{ padding: '0 40px', height: 60 }}
               >
                 {/* Shine sweep */}
-                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/28 to-transparent pointer-events-none" />
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
                 Kies jouw BibleSign
                 <svg
                   width="15" height="15" viewBox="0 0 14 14"
-                  fill="none" stroke="currentColor" strokeWidth="2"
+                  fill="none" stroke="currentColor" strokeWidth="2.2"
                   className="group-hover:translate-x-1 transition-transform duration-300"
                 >
                   <path d="M2 7h10M7 2l5 5-5 5"/>
                 </svg>
               </Link>
 
-              {/* Secondary — ghost pill */}
+              {/* Secondary — ghost/text link */}
               <Link
                 href="/collectie"
-                className="inline-flex items-center justify-center gap-2 px-9 min-h-[58px] rounded-full border border-[#1A1A1A]/22 text-[#1A1A1A] text-[14px] font-medium tracking-wide hover:border-[#1A1A1A]/50 hover:bg-[#1A1A1A]/[0.04] transition-all duration-200"
+                className="group inline-flex items-center gap-2 px-3 text-[14px] font-medium text-[#1A1A1A]/55 hover:text-[#1A1A1A] transition-colors duration-200"
               >
                 Bekijk collectie
+                <svg
+                  width="13" height="13" viewBox="0 0 14 14"
+                  fill="none" stroke="currentColor" strokeWidth="1.85"
+                  className="group-hover:translate-x-0.5 transition-transform duration-200"
+                >
+                  <path d="M2 7h10M7 2l5 5-5 5"/>
+                </svg>
               </Link>
             </div>
 
             {/* Microcopy */}
-            <p className="text-[11.5px] text-[#4A4A4A]/45 -mt-3">
+            <p className="text-[11.5px] text-[#4A4A4A]/40 -mt-2">
               Personaliseer kleur, lijst en Bijbelvertaling.
             </p>
 
             {/* Trust points */}
-            <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <div className="flex flex-wrap gap-x-5 gap-y-2.5 pt-1">
               {trustPoints.map((point) => (
                 <div key={point} className="flex items-center gap-2">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <circle cx="7" cy="7" r="6.5" fill="rgba(200,168,75,0.13)"/>
-                    <path
-                      d="M4.5 7l2 2 3-3"
-                      stroke="#C8A84B" strokeWidth="1.4"
-                      strokeLinecap="round" strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span className="text-[12px] text-[#4A4A4A]">{point}</span>
+                  <div
+                    className="w-4 h-4 rounded-full shrink-0 flex items-center justify-center"
+                    style={{ background: 'rgba(200,168,75,0.12)' }}
+                  >
+                    <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+                      <path
+                        d="M2 5l2.5 2.5 3.5-4"
+                        stroke="#C8A84B" strokeWidth="1.4"
+                        strokeLinecap="round" strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-[12px] text-[#4A4A4A]/65">{point}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* ── RIGHT: Hero visual ── */}
-          <div className="flex items-center justify-center lg:justify-end animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          {/* ─── RIGHT: Hero Visual ─── */}
+          <div
+            className="flex items-center justify-center lg:justify-end animate-fade-up"
+            style={{ animationDelay: '0.12s' }}
+          >
             <HeroVisual />
           </div>
 
