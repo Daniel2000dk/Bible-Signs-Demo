@@ -12,7 +12,7 @@ export default function Hero() {
       id="home"
       className="relative overflow-hidden flex flex-col"
       style={{
-        minHeight: '100vh',
+        minHeight: '82vh',
         paddingTop: 84,
         backgroundImage: 'url(/images/hero-bg.png)',
         backgroundSize: 'cover',
@@ -24,7 +24,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(105deg, rgba(8,6,4,0.96) 0%, rgba(8,6,4,0.90) 28%, rgba(8,6,4,0.72) 45%, rgba(8,6,4,0.30) 62%, rgba(8,6,4,0.08) 78%, transparent 90%)',
+            'linear-gradient(105deg, rgba(8,6,4,0.72) 0%, rgba(8,6,4,0.62) 28%, rgba(8,6,4,0.42) 45%, rgba(8,6,4,0.14) 62%, rgba(8,6,4,0.04) 78%, transparent 90%)',
         }}
       />
 
@@ -54,7 +54,7 @@ export default function Hero() {
       {/* ── Content ── */}
       <div
         className="relative max-w-[1320px] mx-auto px-6 md:px-10 w-full flex flex-col justify-center"
-        style={{ minHeight: 'calc(100vh - 84px)', paddingTop: '5vh', paddingBottom: '6vh' }}
+        style={{ minHeight: 'calc(82vh - 84px)', paddingTop: '4vh', paddingBottom: '5vh' }}
       >
         <div className="flex flex-col gap-8 max-w-[540px] animate-fade-up">
 
