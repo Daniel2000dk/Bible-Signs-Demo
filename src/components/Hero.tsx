@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const trustPoints = [
   'Gratis verzending boven €50',
@@ -13,18 +14,29 @@ export default function Hero() {
       className="relative overflow-hidden flex flex-col"
       style={{
         paddingTop: 84,
-        aspectRatio: '2537 / 920',
-        minHeight: 480,
-        backgroundImage: 'url(/images/hero-bg.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'right top',
-        backgroundRepeat: 'no-repeat',
+        height: '78vh',
+        minHeight: 700,
+        maxHeight: 840,
       }}
     >
+      {/* ── Background image as absolute layer ── */}
+      <Image
+        src="/images/hero-bg.png"
+        alt=""
+        fill
+        priority
+        style={{
+          objectFit: 'cover',
+          objectPosition: '55% center',
+          zIndex: 0,
+        }}
+      />
+
       {/* ── Primary overlay: dark left → transparent right ── */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
+          zIndex: 1,
           background:
             'linear-gradient(105deg, rgba(8,6,4,0.72) 0%, rgba(8,6,4,0.62) 28%, rgba(8,6,4,0.42) 45%, rgba(8,6,4,0.14) 62%, rgba(8,6,4,0.04) 78%, transparent 90%)',
         }}
@@ -34,31 +46,18 @@ export default function Hero() {
       <div
         className="absolute bottom-0 left-0 right-0 pointer-events-none"
         style={{
-          height: 220,
-          background:
-            'linear-gradient(0deg, rgba(8,6,4,0.72) 0%, transparent 100%)',
-        }}
-      />
-
-      {/* ── Subtle warm gold glow on far left (editorial accent) ── */}
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          top: '30%',
-          left: '-5%',
-          width: 320,
-          height: 320,
-          background:
-            'radial-gradient(circle, rgba(200,168,75,0.07) 0%, transparent 70%)',
+          zIndex: 1,
+          height: 180,
+          background: 'linear-gradient(0deg, rgba(8,6,4,0.60) 0%, transparent 100%)',
         }}
       />
 
       {/* ── Content ── */}
       <div
         className="relative max-w-[1320px] mx-auto px-6 md:px-10 w-full flex flex-col justify-center"
-        style={{ flex: 1, paddingTop: '4vh', paddingBottom: '4vh' }}
+        style={{ flex: 1, zIndex: 2, paddingTop: '3vh', paddingBottom: '3vh' }}
       >
-        <div className="flex flex-col gap-8 max-w-[540px] animate-fade-up">
+        <div className="flex flex-col gap-7 max-w-[540px] animate-fade-up">
 
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-3 self-start">
@@ -67,8 +66,7 @@ export default function Hero() {
               style={{
                 width: 28,
                 height: 1,
-                background:
-                  'linear-gradient(90deg, #C8A84B 0%, rgba(200,168,75,0.3) 100%)',
+                background: 'linear-gradient(90deg, #C8A84B 0%, rgba(200,168,75,0.3) 100%)',
               }}
             />
             <span className="text-[10px] font-bold tracking-[0.34em] uppercase text-[#C8A84B]">
@@ -79,14 +77,13 @@ export default function Hero() {
           {/* Headline */}
           <h1
             className="font-serif font-bold tracking-tight text-[#F5F0E8] leading-[0.92]"
-            style={{ fontSize: 'clamp(46px, 5.8vw, 82px)' }}
+            style={{ fontSize: 'clamp(44px, 5.6vw, 80px)' }}
           >
             Maak{' '}
             <span
               style={{
                 color: '#C8A84B',
-                textShadow:
-                  '0 0 60px rgba(200,168,75,0.28), 0 2px 20px rgba(200,168,75,0.14)',
+                textShadow: '0 0 60px rgba(200,168,75,0.28), 0 2px 20px rgba(200,168,75,0.14)',
               }}
             >
               Gods Woord
@@ -108,8 +105,6 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3.5 items-start sm:items-center">
-
-            {/* Primary — gold pill */}
             <Link
               href="#customizer"
               className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#C8A84B] text-[#1A1A1A] text-[14px] font-bold tracking-wide transition-all duration-300 hover:-translate-y-[2px] shadow-[0_8px_32px_rgba(200,168,75,0.40)] hover:shadow-[0_20px_64px_rgba(200,168,75,0.70)]"
@@ -126,7 +121,6 @@ export default function Hero() {
               </svg>
             </Link>
 
-            {/* Secondary */}
             <Link
               href="/collectie"
               className="group inline-flex items-center gap-2 px-3 text-[14px] font-medium transition-colors duration-200"
@@ -145,7 +139,7 @@ export default function Hero() {
 
           {/* Microcopy */}
           <p
-            className="text-[11.5px] -mt-3"
+            className="text-[11.5px] -mt-2"
             style={{ color: 'rgba(245,240,232,0.28)' }}
           >
             Personaliseer kleur, lijst en Bijbelvertaling.
@@ -167,10 +161,7 @@ export default function Hero() {
                     />
                   </svg>
                 </div>
-                <span
-                  className="text-[12px]"
-                  style={{ color: 'rgba(245,240,232,0.48)' }}
-                >
+                <span className="text-[12px]" style={{ color: 'rgba(245,240,232,0.48)' }}>
                   {point}
                 </span>
               </div>
@@ -182,17 +173,13 @@ export default function Hero() {
 
       {/* ── Scroll hint ── */}
       <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 pointer-events-none hidden md:flex flex-col items-center gap-2"
-        style={{ opacity: 0.28 }}
+        className="absolute bottom-7 left-1/2 -translate-x-1/2 pointer-events-none hidden md:flex flex-col items-center gap-2"
+        style={{ zIndex: 2, opacity: 0.28 }}
       >
         <span className="text-[9px] tracking-[0.28em] uppercase text-[#F5F0E8] font-semibold">Scroll</span>
         <div
           className="w-px"
-          style={{
-            height: 36,
-            background:
-              'linear-gradient(180deg, #C8A84B 0%, transparent 100%)',
-          }}
+          style={{ height: 32, background: 'linear-gradient(180deg, #C8A84B 0%, transparent 100%)' }}
         />
       </div>
 
