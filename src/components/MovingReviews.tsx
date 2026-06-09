@@ -48,11 +48,11 @@ const reviews = [
 function ReviewCard({ review }: { review: typeof reviews[0] }) {
   return (
     <div
-      className="shrink-0 w-[290px] md:w-[310px] flex flex-col gap-5 p-6 mr-4 rounded-2xl"
+      className="shrink-0 w-[300px] md:w-[320px] flex flex-col gap-5 p-7 mr-5 rounded-2xl"
       style={{
-        background: 'rgba(255,255,255,0.04)',
-        border: '1px solid rgba(245,240,232,0.09)',
-        boxShadow: '0 4px 24px rgba(0,0,0,0.22)',
+        background: 'rgba(255,255,255,0.05)',
+        border: '1px solid rgba(245,240,232,0.13)',
+        boxShadow: '0 4px 32px rgba(0,0,0,0.28)',
       }}
     >
       {/* Stars */}
@@ -97,10 +97,18 @@ export default function MovingReviews() {
   const duplicated = [...reviews, ...reviews]
 
   return (
-    <section className="py-16 md:py-20 overflow-hidden bg-[#1A1A1A]">
+    <section className="relative pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden bg-[#1A1A1A]">
+
+      {/* Gradient connector — smooths the transition from hero */}
+      <div
+        className="absolute top-0 left-0 right-0 h-16 pointer-events-none"
+        style={{
+          background: 'linear-gradient(180deg, rgba(245,240,232,0.06) 0%, transparent 100%)',
+        }}
+      />
 
       {/* Header */}
-      <div className="max-w-[1320px] mx-auto px-6 md:px-10 mb-10">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 mb-12">
         <div className="flex flex-col md:flex-row md:items-end gap-6 justify-between">
           <div className="flex flex-col gap-3">
             <span className="text-[10px] font-semibold tracking-[0.28em] uppercase text-[#C8A84B]">
@@ -145,7 +153,7 @@ export default function MovingReviews() {
       </div>
 
       {/* Mobile CTA */}
-      <div className="md:hidden max-w-[1320px] mx-auto px-6 mt-8">
+      <div className="md:hidden max-w-[1280px] mx-auto px-6 mt-8">
         <Link
           href="/collectie"
           className="group inline-flex items-center gap-2 text-[13px] font-medium text-[#C8A84B]"

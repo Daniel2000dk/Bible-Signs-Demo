@@ -11,9 +11,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-[#F5F0E8]"
+      className="relative pt-28 pb-20 md:pt-36 md:pb-28 lg:min-h-[760px] lg:flex lg:flex-col lg:justify-center overflow-hidden bg-[#F5F0E8]"
     >
-      {/* Warm radial glow — shifts visual weight toward the poster side */}
+      {/* Warm radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -31,8 +31,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-[1320px] mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_500px] xl:grid-cols-[1fr_560px] gap-14 lg:gap-16 items-center">
+      <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_490px] xl:grid-cols-[1fr_540px] gap-14 lg:gap-16 items-center">
 
           {/* ── LEFT: Copy ── */}
           <div className="flex flex-col gap-7 animate-fade-up">
@@ -46,11 +46,11 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-serif text-[48px] md:text-[58px] lg:text-[66px] xl:text-[74px] font-bold leading-[1.0] tracking-tight text-[#1A1A1A]">
+            <h1 className="font-serif text-[50px] md:text-[62px] lg:text-[70px] xl:text-[84px] font-bold leading-[1.0] tracking-tight text-[#1A1A1A]">
               Maak{' '}
               <span
                 className="text-[#C8A84B]"
-                style={{ textShadow: '0 0 48px rgba(200,168,75,0.16)' }}
+                style={{ textShadow: '0 0 56px rgba(200,168,75,0.18)' }}
               >
                 Gods Woord
               </span>
@@ -58,25 +58,26 @@ export default function Hero() {
             </h1>
 
             {/* Subtext */}
-            <p className="text-[16px] md:text-[17px] leading-relaxed text-[#4A4A4A] max-w-[420px]">
+            <p className="text-[16px] md:text-[18px] leading-relaxed text-[#4A4A4A] max-w-[440px]">
               Premium Bijbelse posters die je dagelijks herinneren aan waarheid,
               identiteit en rust in Christus.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              {/* Primary — gold pill with shine */}
+            <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+
+              {/* Primary — gold pill with shine sweep */}
               <Link
                 href="#customizer"
-                className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-[17px] rounded-full bg-[#C8A84B] text-[#1A1A1A] text-[14px] font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_10px_36px_rgba(200,168,75,0.42)]"
+                className="group relative inline-flex items-center justify-center gap-3 px-9 min-h-[58px] rounded-full bg-[#C8A84B] text-[#1A1A1A] text-[14px] font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_14px_52px_rgba(200,168,75,0.55)]"
               >
                 {/* Shine sweep */}
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/28 to-transparent pointer-events-none" />
                 Kies jouw BibleSign
                 <svg
-                  width="14" height="14" viewBox="0 0 14 14"
+                  width="15" height="15" viewBox="0 0 14 14"
                   fill="none" stroke="currentColor" strokeWidth="2"
-                  className="group-hover:translate-x-0.5 transition-transform duration-300"
+                  className="group-hover:translate-x-1 transition-transform duration-300"
                 >
                   <path d="M2 7h10M7 2l5 5-5 5"/>
                 </svg>
@@ -85,14 +86,14 @@ export default function Hero() {
               {/* Secondary — ghost pill */}
               <Link
                 href="/collectie"
-                className="inline-flex items-center justify-center gap-2 px-8 py-[17px] rounded-full border border-[#1A1A1A]/22 text-[#1A1A1A] text-[14px] font-medium tracking-wide hover:border-[#1A1A1A]/50 hover:bg-[#1A1A1A]/[0.04] transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-9 min-h-[58px] rounded-full border border-[#1A1A1A]/22 text-[#1A1A1A] text-[14px] font-medium tracking-wide hover:border-[#1A1A1A]/50 hover:bg-[#1A1A1A]/[0.04] transition-all duration-200"
               >
                 Bekijk collectie
               </Link>
             </div>
 
             {/* Microcopy */}
-            <p className="text-[11.5px] text-[#4A4A4A]/48 -mt-3">
+            <p className="text-[11.5px] text-[#4A4A4A]/45 -mt-3">
               Personaliseer kleur, lijst en Bijbelvertaling.
             </p>
 
@@ -115,7 +116,7 @@ export default function Hero() {
           </div>
 
           {/* ── RIGHT: Hero visual ── */}
-          <div className="flex items-center justify-center lg:justify-end animate-fade-up">
+          <div className="flex items-center justify-center lg:justify-end animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <HeroVisual />
           </div>
 

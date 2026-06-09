@@ -19,12 +19,18 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
 
           {/* ── Logo ── */}
-          <Link href="/" className="select-none flex items-baseline shrink-0">
-            <span className="font-sans text-[17px] font-bold tracking-[0.2em] uppercase text-[#F5F0E8]">
-              BIBLE
-            </span>
-            <span className="font-sans text-[17px] font-bold tracking-[0.2em] uppercase text-[#C8A84B]">
-              SIGNS
+          <Link href="/" className="select-none flex items-center gap-2.5 shrink-0">
+            {/* Gold cross mark */}
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <path d="M8 1v14M1 8h14" stroke="#C8A84B" strokeWidth="1.8" strokeLinecap="round"/>
+            </svg>
+            <span className="flex items-baseline">
+              <span className="font-sans text-[17px] font-bold tracking-[0.2em] uppercase text-[#F5F0E8]">
+                BIBLE
+              </span>
+              <span className="font-sans text-[17px] font-bold tracking-[0.2em] uppercase text-[#C8A84B]">
+                SIGNS
+              </span>
             </span>
           </Link>
 
