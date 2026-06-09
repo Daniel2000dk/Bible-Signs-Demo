@@ -16,7 +16,7 @@ export default function Hero() {
         paddingTop: 84,
         backgroundImage: 'url(/images/hero-bg.png)',
         backgroundSize: 'cover',
-        backgroundPosition: 'center center',
+        backgroundPosition: 'center 15%',
       }}
     >
       {/* ── Primary overlay: dark left → transparent right ── */}
