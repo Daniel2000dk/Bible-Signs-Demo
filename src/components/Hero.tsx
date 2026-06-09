@@ -14,9 +14,8 @@ export default function Hero() {
       className="relative overflow-hidden flex flex-col"
       style={{
         paddingTop: 84,
-        aspectRatio: '2172 / 724',
-        minHeight: 560,
-        maxHeight: 900,
+        aspectRatio: '1896 / 829',
+        minHeight: 480,
       }}
     >
       {/* ── Background image as absolute layer ── */}
