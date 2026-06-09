@@ -156,3 +156,41 @@ BibleSigns is een premium christelijk postermerk dat christelijke jongeren (16�
 - Te kerkelijk / religieus cliché
 - Pastelkleurig en druk
 - Generiek AI-design
+
+---
+
+## 10 DESIGNRICHTING — 3D EDITORIAL LUXURY
+
+We bouwen geen platte posterwebshop, maar een **3D editorial luxury brand experience**. De website moet warm, modern, premium, geloofwaardig en conversiegericht voelen.
+
+**Designrichting:** BibleSigns 3D Editorial Luxury
+
+### Inspiratiebronnen
+- **Seed** — natuurlijke rust, premium vertrouwen, rounded elegance
+- **Ramp** — sterke hiërarchie, conversie, contrast, duidelijke CTA-focus
+- **ThoughtLab** — cinematic hero-drama, oversized typografie, één krachtig hero-object
+
+### Goud & 3D-gebruik
+- Goud **alleen als accent** voor CTA's, highlights, sterren, lijnen en details — nooit dominant
+- 3D, motion en diepte **alleen inzetten** als het productbegrip, verlangen of conversie versterkt
+
+### Hero-doel
+Binnen **2 seconden** moet duidelijk zijn dat BibleSigns premium Bijbelse posters verkoopt die Gods Woord zichtbaar maken in je ruimte.
+
+**Primary CTA:** Kies jouw BibleSign.
+**Secondary CTA:** Bekijk collectie.
+
+### Vermijd altijd
+- Platte webshopstijl of SaaS-look
+- Neon, goedkope gradients, random glassmorphism
+- Drukke animaties, fake AI-look, visuele chaos
+
+---
+
+## 11 TECHNISCHE STACK
+
+Bouw clean in **Next.js**, **TypeScript** en **Tailwind CSS**.
+- Herbruikbare componenten
+- Mock data (geen echte producten of API)
+- Responsive design
+- **Geen** echte checkout, betaling, accounts, Shopify of backend
