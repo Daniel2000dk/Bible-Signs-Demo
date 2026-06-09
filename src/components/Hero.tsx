@@ -14,9 +14,10 @@ export default function Hero() {
       style={{
         paddingTop: 84,
         aspectRatio: '2537 / 920',
+        minHeight: 480,
         backgroundImage: 'url(/images/hero-bg.png)',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        backgroundPosition: 'right top',
         backgroundRepeat: 'no-repeat',
       }}
     >
