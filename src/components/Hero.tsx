@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import HeroVisual from './HeroVisual'
 
 const trustPoints = [
   'Gratis verzending boven €50',
@@ -11,155 +10,190 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden flex flex-col justify-center"
+      className="relative overflow-hidden flex flex-col"
       style={{
-        paddingTop: 84,
         minHeight: '100vh',
-        background:
-          'linear-gradient(150deg, #F8F4EC 0%, #F5F0E8 40%, #EEE7D8 100%)',
+        paddingTop: 84,
+        backgroundImage: 'url(/images/hero-bg.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: '68% center',
       }}
     >
-      {/* Subtle warm radial glow — right side pulls visual depth */}
+      {/* ── Primary overlay: dark left → transparent right ── */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 80% 75% at 72% 38%, rgba(232,220,196,0.60) 0%, transparent 65%)',
+            'linear-gradient(105deg, rgba(8,6,4,0.96) 0%, rgba(8,6,4,0.90) 28%, rgba(8,6,4,0.72) 45%, rgba(8,6,4,0.30) 62%, rgba(8,6,4,0.08) 78%, transparent 90%)',
         }}
       />
 
-      {/* Premium noise grain */}
+      {/* ── Bottom vignette ── */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute bottom-0 left-0 right-0 pointer-events-none"
         style={{
-          opacity: 0.022,
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-          backgroundSize: '256px 256px',
+          height: 220,
+          background:
+            'linear-gradient(0deg, rgba(8,6,4,0.72) 0%, transparent 100%)',
         }}
       />
 
-      <div className="relative max-w-[1320px] mx-auto px-6 md:px-10 w-full py-16 md:py-20 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_510px] xl:grid-cols-[1fr_550px] gap-12 lg:gap-14 xl:gap-16 items-center">
+      {/* ── Subtle warm gold glow on far left (editorial accent) ── */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '30%',
+          left: '-5%',
+          width: 320,
+          height: 320,
+          background:
+            'radial-gradient(circle, rgba(200,168,75,0.07) 0%, transparent 70%)',
+        }}
+      />
 
-          {/* ─── LEFT: Editorial Copy ─── */}
-          <div className="flex flex-col gap-7 animate-fade-up">
+      {/* ── Content ── */}
+      <div
+        className="relative max-w-[1320px] mx-auto px-6 md:px-10 w-full flex flex-col justify-center"
+        style={{ minHeight: 'calc(100vh - 84px)', paddingTop: '5vh', paddingBottom: '6vh' }}
+      >
+        <div className="flex flex-col gap-8 max-w-[540px] animate-fade-up">
 
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-3 self-start">
-              <span
-                className="block shrink-0"
-                style={{
-                  width: 24,
-                  height: 1,
-                  background:
-                    'linear-gradient(90deg, #C8A84B 0%, rgba(200,168,75,0.4) 100%)',
-                }}
-              />
-              <span className="text-[10px] font-bold tracking-[0.32em] uppercase text-[#C8A84B]">
-                Premium Bijbelse Wanddecoratie
-              </span>
-            </div>
-
-            {/* Headline */}
-            <h1
-              className="font-serif font-bold tracking-tight text-[#1A1A1A] leading-[0.93]"
-              style={{ fontSize: 'clamp(48px, 6.2vw, 86px)' }}
-            >
-              Maak{' '}
-              <span
-                style={{
-                  color: '#C8A84B',
-                  textShadow: '0 2px 44px rgba(200,168,75,0.18)',
-                }}
-              >
-                Gods Woord
-              </span>
-              <br />
-              zichtbaar in
-              <br />
-              jouw ruimte.
-            </h1>
-
-            {/* Subtext */}
-            <p className="text-[16px] md:text-[17px] leading-relaxed text-[#4A4A4A] max-w-[420px]">
-              Premium Bijbelse posters die je dagelijks herinneren aan
-              waarheid, identiteit en rust in Christus.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3.5 items-start sm:items-center">
-
-              {/* Primary — gold pill */}
-              <Link
-                href="#customizer"
-                className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#C8A84B] text-[#1A1A1A] text-[14px] font-bold tracking-wide transition-all duration-300 hover:-translate-y-[2px] shadow-[0_8px_28px_rgba(200,168,75,0.32)] hover:shadow-[0_18px_58px_rgba(200,168,75,0.65)]"
-                style={{ padding: '0 40px', height: 60 }}
-              >
-                {/* Shine sweep */}
-                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
-                Kies jouw BibleSign
-                <svg
-                  width="15" height="15" viewBox="0 0 14 14"
-                  fill="none" stroke="currentColor" strokeWidth="2.2"
-                  className="group-hover:translate-x-1 transition-transform duration-300"
-                >
-                  <path d="M2 7h10M7 2l5 5-5 5"/>
-                </svg>
-              </Link>
-
-              {/* Secondary — ghost/text link */}
-              <Link
-                href="/collectie"
-                className="group inline-flex items-center gap-2 px-3 text-[14px] font-medium text-[#1A1A1A]/55 hover:text-[#1A1A1A] transition-colors duration-200"
-              >
-                Bekijk collectie
-                <svg
-                  width="13" height="13" viewBox="0 0 14 14"
-                  fill="none" stroke="currentColor" strokeWidth="1.85"
-                  className="group-hover:translate-x-0.5 transition-transform duration-200"
-                >
-                  <path d="M2 7h10M7 2l5 5-5 5"/>
-                </svg>
-              </Link>
-            </div>
-
-            {/* Microcopy */}
-            <p className="text-[11.5px] text-[#4A4A4A]/40 -mt-2">
-              Personaliseer kleur, lijst en Bijbelvertaling.
-            </p>
-
-            {/* Trust points */}
-            <div className="flex flex-wrap gap-x-5 gap-y-2.5 pt-1">
-              {trustPoints.map((point) => (
-                <div key={point} className="flex items-center gap-2">
-                  <div
-                    className="w-4 h-4 rounded-full shrink-0 flex items-center justify-center"
-                    style={{ background: 'rgba(200,168,75,0.12)' }}
-                  >
-                    <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
-                      <path
-                        d="M2 5l2.5 2.5 3.5-4"
-                        stroke="#C8A84B" strokeWidth="1.4"
-                        strokeLinecap="round" strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <span className="text-[12px] text-[#4A4A4A]/65">{point}</span>
-                </div>
-              ))}
-            </div>
+          {/* Eyebrow */}
+          <div className="inline-flex items-center gap-3 self-start">
+            <span
+              className="block shrink-0"
+              style={{
+                width: 28,
+                height: 1,
+                background:
+                  'linear-gradient(90deg, #C8A84B 0%, rgba(200,168,75,0.3) 100%)',
+              }}
+            />
+            <span className="text-[10px] font-bold tracking-[0.34em] uppercase text-[#C8A84B]">
+              Premium Bijbelse Wanddecoratie
+            </span>
           </div>
 
-          {/* ─── RIGHT: Hero Visual ─── */}
-          <div
-            className="flex items-center justify-center lg:justify-end animate-fade-up"
-            style={{ animationDelay: '0.12s' }}
+          {/* Headline */}
+          <h1
+            className="font-serif font-bold tracking-tight text-[#F5F0E8] leading-[0.92]"
+            style={{ fontSize: 'clamp(46px, 5.8vw, 82px)' }}
           >
-            <HeroVisual />
+            Maak{' '}
+            <span
+              style={{
+                color: '#C8A84B',
+                textShadow:
+                  '0 0 60px rgba(200,168,75,0.28), 0 2px 20px rgba(200,168,75,0.14)',
+              }}
+            >
+              Gods Woord
+            </span>
+            <br />
+            zichtbaar in
+            <br />
+            jouw ruimte.
+          </h1>
+
+          {/* Subtext */}
+          <p
+            className="text-[16px] md:text-[17px] leading-relaxed max-w-[400px]"
+            style={{ color: 'rgba(245,240,232,0.62)' }}
+          >
+            Premium Bijbelse posters die je dagelijks herinneren aan
+            waarheid, identiteit en rust in Christus.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-3.5 items-start sm:items-center">
+
+            {/* Primary — gold pill */}
+            <Link
+              href="#customizer"
+              className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#C8A84B] text-[#1A1A1A] text-[14px] font-bold tracking-wide transition-all duration-300 hover:-translate-y-[2px] shadow-[0_8px_32px_rgba(200,168,75,0.40)] hover:shadow-[0_20px_64px_rgba(200,168,75,0.70)]"
+              style={{ padding: '0 40px', height: 60 }}
+            >
+              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+              Kies jouw BibleSign
+              <svg
+                width="15" height="15" viewBox="0 0 14 14"
+                fill="none" stroke="currentColor" strokeWidth="2.2"
+                className="group-hover:translate-x-1 transition-transform duration-300"
+              >
+                <path d="M2 7h10M7 2l5 5-5 5"/>
+              </svg>
+            </Link>
+
+            {/* Secondary */}
+            <Link
+              href="/collectie"
+              className="group inline-flex items-center gap-2 px-3 text-[14px] font-medium transition-colors duration-200"
+              style={{ color: 'rgba(245,240,232,0.45)' }}
+            >
+              Bekijk collectie
+              <svg
+                width="13" height="13" viewBox="0 0 14 14"
+                fill="none" stroke="currentColor" strokeWidth="1.85"
+                className="group-hover:translate-x-0.5 transition-transform duration-200"
+              >
+                <path d="M2 7h10M7 2l5 5-5 5"/>
+              </svg>
+            </Link>
+          </div>
+
+          {/* Microcopy */}
+          <p
+            className="text-[11.5px] -mt-3"
+            style={{ color: 'rgba(245,240,232,0.28)' }}
+          >
+            Personaliseer kleur, lijst en Bijbelvertaling.
+          </p>
+
+          {/* Trust points */}
+          <div className="flex flex-wrap gap-x-5 gap-y-2.5">
+            {trustPoints.map((point) => (
+              <div key={point} className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 rounded-full shrink-0 flex items-center justify-center"
+                  style={{ background: 'rgba(200,168,75,0.14)' }}
+                >
+                  <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+                    <path
+                      d="M2 5l2.5 2.5 3.5-4"
+                      stroke="#C8A84B" strokeWidth="1.4"
+                      strokeLinecap="round" strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <span
+                  className="text-[12px]"
+                  style={{ color: 'rgba(245,240,232,0.48)' }}
+                >
+                  {point}
+                </span>
+              </div>
+            ))}
           </div>
 
         </div>
       </div>
+
+      {/* ── Scroll hint ── */}
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 pointer-events-none hidden md:flex flex-col items-center gap-2"
+        style={{ opacity: 0.28 }}
+      >
+        <span className="text-[9px] tracking-[0.28em] uppercase text-[#F5F0E8] font-semibold">Scroll</span>
+        <div
+          className="w-px"
+          style={{
+            height: 36,
+            background:
+              'linear-gradient(180deg, #C8A84B 0%, transparent 100%)',
+          }}
+        />
+      </div>
+
     </section>
   )
 }
