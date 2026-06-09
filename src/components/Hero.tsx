@@ -27,7 +27,7 @@ export default function Hero() {
         priority
         style={{
           objectFit: 'cover',
-          objectPosition: '55% center',
+          objectPosition: '50% center',
           zIndex: 0,
         }}
       />
