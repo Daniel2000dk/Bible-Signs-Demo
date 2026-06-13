@@ -172,18 +172,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Scroll hint ── */}
-      <div
-        className="absolute bottom-7 left-1/2 -translate-x-1/2 pointer-events-none hidden md:flex flex-col items-center gap-2"
-        style={{ zIndex: 2, opacity: 0.28 }}
-      >
-        <span className="text-[9px] tracking-[0.28em] uppercase text-[#F5F0E8] font-semibold">Scroll</span>
-        <div
-          className="w-px"
-          style={{ height: 32, background: 'linear-gradient(180deg, #C8A84B 0%, transparent 100%)' }}
-        />
-      </div>
-
     </section>
   )
 }
