@@ -55,7 +55,7 @@ export default function Hero() {
 
       {/* ── Content ── */}
       <div
-        className="relative max-w-[1320px] mx-auto px-6 md:px-10 w-full flex flex-col justify-center"
+        className="relative max-w-[1320px] mx-auto pl-5 pr-6 md:pl-8 md:pr-10 w-full flex flex-col justify-center"
         style={{ flex: 1, zIndex: 2, paddingTop: '3vh', paddingBottom: '3vh' }}
       >
         <div className="flex flex-col gap-7 max-w-[540px] animate-fade-up">
@@ -77,8 +77,8 @@ export default function Hero() {
 
           {/* Headline */}
           <h1
-            className="font-serif font-bold tracking-tight text-[#F5F0E8] leading-[0.92]"
-            style={{ fontSize: 'clamp(44px, 5.6vw, 80px)' }}
+            className="font-serif font-bold tracking-tight text-[#F5F0E8] leading-[0.97]"
+            style={{ fontSize: 'clamp(41px, 5.2vw, 74px)' }}
           >
             Maak{' '}
             <span
@@ -98,7 +98,7 @@ export default function Hero() {
           {/* Subtext */}
           <p
             className="text-[16px] md:text-[17px] leading-relaxed max-w-[400px]"
-            style={{ color: 'rgba(245,240,232,0.62)' }}
+            style={{ color: 'rgba(245,240,232,0.82)' }}
           >
             Premium Bijbelse posters die je dagelijks herinneren aan
             waarheid, identiteit en rust in Christus.
@@ -108,8 +108,8 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-3.5 items-start sm:items-center">
             <Link
               href="#customizer"
-              className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#C8A84B] text-[#1A1A1A] text-[14px] font-bold tracking-wide transition-all duration-300 hover:-translate-y-[2px] shadow-[0_8px_32px_rgba(200,168,75,0.40)] hover:shadow-[0_20px_64px_rgba(200,168,75,0.70)]"
-              style={{ padding: '0 40px', height: 60 }}
+              className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#C8A84B] text-[#1A1A1A] text-[14px] font-bold tracking-wide transition-all duration-300 hover:-translate-y-[3px] shadow-[0_10px_36px_rgba(200,168,75,0.50),0_2px_8px_rgba(200,168,75,0.28)] hover:shadow-[0_22px_72px_rgba(200,168,75,0.75),0_4px_16px_rgba(200,168,75,0.40)]"
+              style={{ padding: '0 36px', height: 58 }}
             >
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
               Kies jouw BibleSign
@@ -124,8 +124,8 @@ export default function Hero() {
 
             <Link
               href="/collectie"
-              className="group inline-flex items-center gap-2 px-3 text-[14px] font-medium transition-colors duration-200"
-              style={{ color: 'rgba(245,240,232,0.45)' }}
+              className="group inline-flex items-center gap-2 px-3 text-[14px] font-medium transition-colors duration-200 hover:text-[rgba(245,240,232,0.88)]"
+              style={{ color: 'rgba(245,240,232,0.62)' }}
             >
               Bekijk collectie
               <svg
@@ -147,12 +147,12 @@ export default function Hero() {
           </p>
 
           {/* Trust points */}
-          <div className="flex flex-wrap gap-x-5 gap-y-2.5">
+          <div className="flex flex-wrap gap-x-6 gap-y-3">
             {trustPoints.map((point) => (
               <div key={point} className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 rounded-full shrink-0 flex items-center justify-center"
-                  style={{ background: 'rgba(200,168,75,0.14)' }}
+                  style={{ background: 'rgba(200,168,75,0.18)' }}
                 >
                   <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
                     <path
@@ -162,7 +162,7 @@ export default function Hero() {
                     />
                   </svg>
                 </div>
-                <span className="text-[12px]" style={{ color: 'rgba(245,240,232,0.48)' }}>
+                <span className="text-[13px]" style={{ color: 'rgba(245,240,232,0.68)' }}>
                   {point}
                 </span>
               </div>
