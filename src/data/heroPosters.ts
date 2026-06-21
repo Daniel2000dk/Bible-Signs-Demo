@@ -1,0 +1,178 @@
+export interface HeroPoster {
+  id: number
+  category: string
+  title: string
+  verse: string
+  reference: string
+}
+
+export const heroPosters: HeroPoster[] = [
+  {
+    id: 1,
+    category: 'IDENTITEIT',
+    title: 'Alles is nieuw geworden',
+    verse: 'Wie in Christus is, is een nieuwe schepping.',
+    reference: '2 Kor. 5:17',
+  },
+  {
+    id: 2,
+    category: 'RUST',
+    title: 'Kom tot Mij',
+    verse: 'Kom tot Mij, allen die vermoeid en belast bent, en Ik zal u rust geven.',
+    reference: 'Matt. 11:28',
+  },
+  {
+    id: 3,
+    category: 'MOED',
+    title: 'Wees sterk en moedig',
+    verse: 'Wees sterk en moedig. Wees niet bevreesd, want Ik ben met u.',
+    reference: 'Joz. 1:9',
+  },
+  {
+    id: 4,
+    category: 'VERTROUWEN',
+    title: 'De Heer is mijn Herder',
+    verse: 'De HEER is mijn herder, het ontbreekt mij aan niets.',
+    reference: 'Ps. 23:1',
+  },
+  {
+    id: 5,
+    category: 'NABIJHEID',
+    title: 'Wees niet bang',
+    verse: 'Ik ben bij je, wees niet angstig, want Ik ben uw God.',
+    reference: 'Jes. 41:10',
+  },
+  {
+    id: 6,
+    category: 'GENADE',
+    title: 'Mijn genade is genoeg',
+    verse: 'Mijn genade is u genoeg, want Mijn kracht wordt in zwakheid volbracht.',
+    reference: '2 Kor. 12:9',
+  },
+  {
+    id: 7,
+    category: 'VERTROUWEN',
+    title: 'Vertrouw op de Heer',
+    verse: 'Vertrouw op de HEER met heel uw hart en steun niet op uw eigen inzicht.',
+    reference: 'Spr. 3:5',
+  },
+  {
+    id: 8,
+    category: 'GELOOF',
+    title: 'Wandel door geloof',
+    verse: 'Wij wandelen door geloof, niet door aanschouwing.',
+    reference: '2 Kor. 5:7',
+  },
+  {
+    id: 9,
+    category: 'VREDE',
+    title: 'Vrede laat Ik u',
+    verse: 'Mijn vrede geef Ik u. Niet zoals de wereld die geeft, geef Ik u.',
+    reference: 'Joh. 14:27',
+  },
+  {
+    id: 10,
+    category: 'LIEFDE',
+    title: 'Je bent geliefd',
+    verse: 'Want God heeft de wereld zo lief gehad dat Hij Zijn eniggeboren Zoon gegeven heeft.',
+    reference: 'Joh. 3:16',
+  },
+  {
+    id: 11,
+    category: 'LICHT',
+    title: 'Ik ben het licht',
+    verse: 'Ik ben het licht van de wereld. Wie Mij volgt, wandelt niet in duisternis.',
+    reference: 'Joh. 8:12',
+  },
+  {
+    id: 12,
+    category: 'VERNIEUWING',
+    title: 'Alles wordt nieuw',
+    verse: 'Zie, Ik maak alle dingen nieuw. Want deze woorden zijn getrouw en waarachtig.',
+    reference: 'Op. 21:5',
+  },
+  {
+    id: 13,
+    category: 'STILTE',
+    title: 'Stil en weet',
+    verse: 'Wees stil en weet dat Ik God ben.',
+    reference: 'Ps. 46:11',
+  },
+  {
+    id: 14,
+    category: 'DOEL',
+    title: 'Gods plan blijft staan',
+    verse: 'Ik ken de plannen die Ik voor u heb, spreekt de HEER. Plannen van vrede.',
+    reference: 'Jer. 29:11',
+  },
+  {
+    id: 15,
+    category: 'ROEPING',
+    title: 'Gemaakt met doel',
+    verse: 'Wij zijn Zijn maaksel, geschapen in Christus Jezus om goede werken te doen.',
+    reference: 'Ef. 2:10',
+  },
+  {
+    id: 16,
+    category: 'KRACHT',
+    title: 'Niet bang zijn',
+    verse: 'God gaf ons niet de geest van angst, maar van kracht, liefde en bezonnenheid.',
+    reference: '2 Tim. 1:7',
+  },
+  {
+    id: 17,
+    category: 'HOOP',
+    title: 'Hoop in Christus',
+    verse: 'De hoop beschaamt niet, want Gods liefde is in ons hart uitgestort door de Heilige Geest.',
+    reference: 'Rom. 5:5',
+  },
+  {
+    id: 18,
+    category: 'KRACHT',
+    title: 'Sterk in zwakheid',
+    verse: 'Als ik zwak ben, dan ben ik sterk.',
+    reference: '2 Kor. 12:10',
+  },
+  {
+    id: 19,
+    category: 'VRIJHEID',
+    title: 'De waarheid maakt vrij',
+    verse: 'U zult de waarheid kennen, en de waarheid zal u vrijmaken.',
+    reference: 'Joh. 8:32',
+  },
+  {
+    id: 20,
+    category: 'IDENTITEIT',
+    title: 'Kind van God',
+    verse: 'Zie hoe groot de liefde is die de Vader ons gegeven heeft: wij worden kinderen van God genoemd.',
+    reference: '1 Joh. 3:1',
+  },
+  {
+    id: 21,
+    category: 'RUST',
+    title: 'Ik geef u rust',
+    verse: 'Neemt Mijn juk op u en leert van Mij. U zult rust vinden voor uw ziel.',
+    reference: 'Matt. 11:29',
+  },
+  {
+    id: 22,
+    category: 'HULP',
+    title: 'Mijn hulp is van de Heer',
+    verse: 'Mijn hulp is van de HEER, Die hemel en aarde gemaakt heeft.',
+    reference: 'Ps. 121:2',
+  },
+  {
+    id: 23,
+    category: 'GELOOF',
+    title: 'Onwankelbaar',
+    verse: 'Wees standvastig, onwankelbaar, altijd overvloedig in het werk van de Heer.',
+    reference: '1 Kor. 15:58',
+  },
+  {
+    id: 24,
+    category: 'GENADE',
+    title: 'Door genade gered',
+    verse: 'Want uit genade bent u zalig geworden, door het geloof. En dit is niet uit uzelf.',
+    reference: 'Ef. 2:8',
+  },
+]
