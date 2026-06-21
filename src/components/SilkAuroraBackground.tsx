@@ -138,8 +138,8 @@ export function SilkAuroraBackground({
   sheenColor = '#F0E8D8',
   accentColor = '#C8A84B',
   speed = 0.65,
-  intensity = 0.78,
-  grain = 0.70,
+  intensity = 0.52,
+  grain = 0.48,
   vignette = 0.85,
   mouseInfluence = 0.70,
   interactive = true,
@@ -311,12 +311,12 @@ export function SilkAuroraBackground({
               'linear-gradient(90deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.06) 40%, rgba(0,0,0,0.38) 100%)',
           }}
         />
-        {/* Bodem darkening */}
+        {/* Bodem darkening — sterk genoeg om aurora-ribbons te verbergen in CTA-zone */}
         <div
           className="pointer-events-none absolute inset-x-0 bottom-0"
           style={{
-            height: '40%',
-            background: 'linear-gradient(to top, rgba(26,26,26,0.72) 0%, transparent 100%)',
+            height: '70%',
+            background: 'linear-gradient(to top, #1A1A1A 0%, #1A1A1A 18%, rgba(26,26,26,0.94) 34%, rgba(26,26,26,0.68) 52%, rgba(26,26,26,0.24) 72%, transparent 100%)',
           }}
         />
       </div>

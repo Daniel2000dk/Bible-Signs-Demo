@@ -66,7 +66,6 @@ function getTransform(offset: number): Transform {
 
 export default function FloatingPosterGallery() {
   const posRef = useRef(0)
-  const isPausedRef = useRef(false)
   const posterRefs = useRef<(HTMLDivElement | null)[]>([])
 
   useEffect(() => {
@@ -79,9 +78,7 @@ export default function FloatingPosterGallery() {
       const dt = Math.min(now - last, 100)
       last = now
 
-      if (!isPausedRef.current) {
-        posRef.current = (posRef.current + dt * SPEED) % TOTAL
-      }
+      posRef.current = (posRef.current + dt * SPEED) % TOTAL
 
       for (let i = 0; i < TOTAL; i++) {
         const el = posterRefs.current[i]
@@ -114,8 +111,6 @@ export default function FloatingPosterGallery() {
     <div
       className="relative w-full"
       style={{ perspective: '1400px' }}
-      onMouseEnter={() => { isPausedRef.current = true }}
-      onMouseLeave={() => { isPausedRef.current = false }}
     >
       {/* Carrousel podium */}
       <div className="relative w-full" style={{ height: 400 }}>
