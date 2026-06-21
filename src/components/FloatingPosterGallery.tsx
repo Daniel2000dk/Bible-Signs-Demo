@@ -158,37 +158,6 @@ export default function FloatingPosterGallery() {
         ))}
       </div>
 
-      {/* Gouden boog — podium vloer effect */}
-      <div
-        className="pointer-events-none absolute"
-        style={{
-          bottom: 72,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '66%',
-          height: 52,
-          borderBottom: '1px solid rgba(200,168,75,0.20)',
-          borderLeft: '1px solid rgba(200,168,75,0.06)',
-          borderRight: '1px solid rgba(200,168,75,0.06)',
-          borderRadius: '0 0 50% 50%',
-          zIndex: 38,
-        }}
-      />
-
-      {/* Subtiel goud glinstering op de boog */}
-      <div
-        className="pointer-events-none absolute"
-        style={{
-          bottom: 68,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '50%',
-          height: 4,
-          background:
-            'radial-gradient(ellipse 100% 100% at 50% 100%, rgba(200,168,75,0.22) 0%, transparent 75%)',
-          zIndex: 39,
-        }}
-      />
     </div>
   )
 }

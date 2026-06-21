@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import FloatingPosterGallery from './FloatingPosterGallery'
+import SilkAuroraBackground from './SilkAuroraBackground'
 import PosterCard3D from './PosterCard3D'
 import { heroPosters } from '@/data/heroPosters'
 
@@ -18,27 +19,8 @@ export default function Hero() {
       className="relative overflow-hidden"
       style={{ background: '#1A1A1A', minHeight: '100svh', paddingTop: 80 }}
     >
-      {/* Subtiele noise textuur */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          opacity: 0.025,
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-          backgroundSize: '256px 256px',
-          zIndex: 0,
-        }}
-      />
-
-      {/* Centrale radiale gloed */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse 78% 52% at 50% 36%, rgba(200,168,75,0.038) 0%, transparent 65%)',
-          zIndex: 0,
-        }}
-      />
+      {/* Silk Aurora WebGL achtergrond */}
+      <SilkAuroraBackground />
 
       {/* ── Desktop: gecentraliseerde kolom ── */}
       <div
@@ -118,6 +100,31 @@ export default function Hero() {
         {/* 3D Carrousel — volledige breedte */}
         <div className="w-full" style={{ marginTop: 44 }}>
           <FloatingPosterGallery />
+        </div>
+
+        {/* Gouden boog — podiumvloer, na de carrousel fade */}
+        <div className="flex justify-center" style={{ marginTop: -52, position: 'relative', zIndex: 2 }}>
+          <div
+            style={{
+              width: '62%',
+              height: 56,
+              borderBottom: '1px solid rgba(200,168,75,0.22)',
+              borderLeft: '1px solid rgba(200,168,75,0.07)',
+              borderRight: '1px solid rgba(200,168,75,0.07)',
+              borderRadius: '0 0 50% 50%',
+            }}
+          />
+        </div>
+        {/* Gouden shimmer op de boog */}
+        <div className="flex justify-center" style={{ marginTop: -4, position: 'relative', zIndex: 2 }}>
+          <div
+            style={{
+              width: '46%',
+              height: 6,
+              background:
+                'radial-gradient(ellipse 100% 100% at 50% 100%, rgba(200,168,75,0.18) 0%, transparent 75%)',
+            }}
+          />
         </div>
 
         {/* CTA knoppen */}
