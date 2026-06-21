@@ -134,8 +134,8 @@ export interface SilkAuroraBackgroundProps {
 
 export function SilkAuroraBackground({
   baseColor = '#1A1A1A',
-  midColor = '#2F3A32',
-  sheenColor = '#E8DDC8',
+  midColor = '#0C1220',
+  sheenColor = '#F0E8D8',
   accentColor = '#C8A84B',
   speed = 0.65,
   intensity = 0.78,

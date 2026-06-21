@@ -88,7 +88,7 @@ export default function Hero() {
           style={{
             fontSize: 'clamp(14px, 1.05vw, 16.5px)',
             lineHeight: 1.74,
-            color: 'rgba(245,240,232,0.56)',
+            color: 'rgba(245,240,232,0.68)',
             maxWidth: 420,
             marginTop: 18,
           }}
@@ -102,33 +102,8 @@ export default function Hero() {
           <FloatingPosterGallery />
         </div>
 
-        {/* Gouden boog — podiumvloer, na de carrousel fade */}
-        <div className="flex justify-center" style={{ marginTop: -52, position: 'relative', zIndex: 2 }}>
-          <div
-            style={{
-              width: '62%',
-              height: 56,
-              borderBottom: '1px solid rgba(200,168,75,0.22)',
-              borderLeft: '1px solid rgba(200,168,75,0.07)',
-              borderRight: '1px solid rgba(200,168,75,0.07)',
-              borderRadius: '0 0 50% 50%',
-            }}
-          />
-        </div>
-        {/* Gouden shimmer op de boog */}
-        <div className="flex justify-center" style={{ marginTop: -4, position: 'relative', zIndex: 2 }}>
-          <div
-            style={{
-              width: '46%',
-              height: 6,
-              background:
-                'radial-gradient(ellipse 100% 100% at 50% 100%, rgba(200,168,75,0.18) 0%, transparent 75%)',
-            }}
-          />
-        </div>
-
         {/* CTA knoppen */}
-        <div className="flex items-center gap-5" style={{ marginTop: 32 }}>
+        <div className="flex items-center gap-5" style={{ marginTop: 20 }}>
           <Link
             href="#customizer"
             className="group relative inline-flex items-center justify-center gap-2.5 overflow-hidden rounded-full font-bold text-[13.5px] tracking-wide transition-all duration-300 hover:-translate-y-[2px] text-[#1A1A1A]"

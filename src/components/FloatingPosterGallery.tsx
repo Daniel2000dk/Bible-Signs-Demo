@@ -8,20 +8,20 @@ const TOTAL = heroPosters.length
 const POSTER_W = 230
 const POSTER_H = 322
 
-// 1 poster positie per 3800ms → volle rotatie in ~91 seconden
-const SPEED = 1 / 3800
+// Cinematic snelheid — volle rotatie in ~124 seconden
+const SPEED = 1 / 5200
 
 function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t
 }
 
-// Vaste keyframe posities per geheel offset-getal
+// 5 posters duidelijk zichtbaar, side posters minimale blur
 const KEYFRAMES = [
   { x: 0,   z: 0,    rotY: 0,  scale: 1.00, opacity: 1.00, blur: 0   },
-  { x: 295, z: -85,  rotY: 22, scale: 0.88, opacity: 0.72, blur: 0   },
-  { x: 520, z: -170, rotY: 37, scale: 0.74, opacity: 0.34, blur: 1.2 },
-  { x: 685, z: -235, rotY: 47, scale: 0.61, opacity: 0.09, blur: 2.8 },
-  { x: 800, z: -280, rotY: 54, scale: 0.51, opacity: 0.00, blur: 4.0 },
+  { x: 255, z: -72,  rotY: 14, scale: 0.91, opacity: 0.86, blur: 0   },
+  { x: 468, z: -142, rotY: 25, scale: 0.80, opacity: 0.60, blur: 0   },
+  { x: 636, z: -202, rotY: 34, scale: 0.67, opacity: 0.22, blur: 0.7 },
+  { x: 758, z: -252, rotY: 41, scale: 0.56, opacity: 0.00, blur: 1.4 },
 ]
 
 interface Transform {
@@ -76,7 +76,6 @@ export default function FloatingPosterGallery() {
     let last = performance.now()
 
     const tick = (now: number) => {
-      // Cap dt zodat een tab-switch geen grote sprong veroorzaakt
       const dt = Math.min(now - last, 100)
       last = now
 
@@ -92,13 +91,16 @@ export default function FloatingPosterGallery() {
         if (offset > TOTAL / 2) offset -= TOTAL
         if (offset < -TOTAL / 2) offset += TOTAL
 
-        const t = getTransform(offset)
-        const opacity = Math.max(0, t.opacity)
+        const tr = getTransform(offset)
+        const opacity = Math.max(0, tr.opacity)
 
-        el.style.transform = `translate(-50%, -50%) translateX(${t.x.toFixed(1)}px) translateZ(${t.z.toFixed(1)}px) rotateY(${t.rotateY.toFixed(2)}deg) scale(${t.scale.toFixed(3)})`
+        // Subtiel organisch zweven — gouden ratio voor niet-herhalend patroon
+        const floatY = Math.sin(now / 2800 + i * 0.618) * 5
+
+        el.style.transform = `translate(-50%, calc(-50% + ${floatY.toFixed(1)}px)) translateX(${tr.x.toFixed(1)}px) translateZ(${tr.z.toFixed(1)}px) rotateY(${tr.rotateY.toFixed(2)}deg) scale(${tr.scale.toFixed(3)})`
         el.style.opacity = opacity.toFixed(3)
         el.style.zIndex = String(Math.max(1, Math.round(50 - Math.abs(offset) * 10)))
-        el.style.filter = t.blur > 0.05 ? `blur(${t.blur.toFixed(2)}px)` : ''
+        el.style.filter = tr.blur > 0.05 ? `blur(${tr.blur.toFixed(2)}px)` : ''
       }
 
       raf = requestAnimationFrame(tick)
@@ -111,7 +113,7 @@ export default function FloatingPosterGallery() {
   return (
     <div
       className="relative w-full"
-      style={{ perspective: '1600px' }}
+      style={{ perspective: '1400px' }}
       onMouseEnter={() => { isPausedRef.current = true }}
       onMouseLeave={() => { isPausedRef.current = false }}
     >
@@ -123,7 +125,7 @@ export default function FloatingPosterGallery() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse 70% 58% at 50% 52%, rgba(200,168,75,0.075) 0%, rgba(200,168,75,0.018) 52%, transparent 74%)',
+              'radial-gradient(ellipse 68% 55% at 50% 50%, rgba(200,168,75,0.055) 0%, rgba(200,168,75,0.012) 58%, transparent 75%)',
             zIndex: 0,
           }}
         />
@@ -151,6 +153,7 @@ export default function FloatingPosterGallery() {
               opacity: 0,
               willChange: 'transform, opacity',
               pointerEvents: 'none',
+              boxShadow: '0 28px 72px rgba(0,0,0,0.60), 0 8px 22px rgba(0,0,0,0.38)',
             }}
           >
             <PosterCard3D poster={poster} width={POSTER_W} height={POSTER_H} />
