@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       id="home"
       className="relative overflow-hidden"
-      style={{ background: 'transparent', minHeight: '100svh', paddingTop: 80 }}
+      style={{ background: 'transparent', minHeight: '100svh', paddingTop: 80, paddingBottom: 0 }}
     >
 
       {/* ── Desktop: gecentraliseerde kolom ── */}

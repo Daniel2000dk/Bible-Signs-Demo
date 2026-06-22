@@ -179,10 +179,9 @@ export default function BestSellers() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: 'rgba(13,15,20,0.80)',
+        background: 'transparent',
         paddingTop: 96,
         paddingBottom: 96,
-        borderTop: '1px solid rgba(200,168,75,0.06)',
       }}
     >
       {/* Ambient radial glow */}

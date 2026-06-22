@@ -28,8 +28,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: 'rgba(8,9,12,0.94)',
-        borderTop: '1px solid rgba(200,168,75,0.10)',
+        background: 'rgba(6,7,10,0.72)',
+        borderTop: '1px solid rgba(200,168,75,0.08)',
       }}
     >
       {/* Top gold accent line */}

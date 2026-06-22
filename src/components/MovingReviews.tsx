@@ -188,10 +188,9 @@ export default function MovingReviews() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: 'rgba(14,15,18,0.82)',
+        background: 'transparent',
         paddingTop: 96,
         paddingBottom: 88,
-        borderTop: '1px solid rgba(200,168,75,0.07)',
       }}
     >
       {/* Ambient glow */}
@@ -283,7 +282,7 @@ export default function MovingReviews() {
           className="absolute left-0 top-0 bottom-0 pointer-events-none z-10"
           style={{
             width: 100,
-            background: 'linear-gradient(90deg, rgba(14,15,18,0.95) 0%, transparent 100%)',
+            background: 'linear-gradient(90deg, rgba(10,10,14,0.92) 0%, transparent 100%)',
           }}
         />
         {/* Right fade */}
@@ -291,7 +290,7 @@ export default function MovingReviews() {
           className="absolute right-0 top-0 bottom-0 pointer-events-none z-10"
           style={{
             width: 100,
-            background: 'linear-gradient(270deg, rgba(14,15,18,0.95) 0%, transparent 100%)',
+            background: 'linear-gradient(270deg, rgba(10,10,14,0.92) 0%, transparent 100%)',
           }}
         />
 
