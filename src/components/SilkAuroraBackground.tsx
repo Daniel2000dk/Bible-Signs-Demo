@@ -311,14 +311,6 @@ export function SilkAuroraBackground({
               'linear-gradient(90deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.06) 40%, rgba(0,0,0,0.38) 100%)',
           }}
         />
-        {/* Bodem vignette — subtiel, kleuronafhankelijk */}
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0"
-          style={{
-            height: '55%',
-            background: 'linear-gradient(to top, rgba(8,9,14,0.88) 0%, rgba(8,9,14,0.60) 28%, rgba(8,9,14,0.18) 60%, transparent 100%)',
-          }}
-        />
       </div>
     </WebGLErrorBoundary>
   )
