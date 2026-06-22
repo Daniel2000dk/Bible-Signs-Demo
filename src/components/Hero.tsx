@@ -57,21 +57,21 @@ export default function Hero() {
 
         {/* Headline */}
         <h1
-          className="font-bold text-[#F5F0E8] animate-fade-up"
+          className="font-bold text-white animate-fade-up"
           style={{
             fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif",
             fontSize: 'clamp(42px, 5.2vw, 74px)',
             lineHeight: 1.04,
             letterSpacing: '-0.022em',
             maxWidth: 800,
+            textShadow: '0 2px 32px rgba(0,0,0,0.70)',
           }}
         >
           Maak{' '}
           <span
             style={{
-              color: '#C8A84B',
-              textShadow:
-                '0 0 56px rgba(200,168,75,0.22), 0 2px 20px rgba(200,168,75,0.10)',
+              color: '#F5E070',
+              textShadow: '0 0 40px rgba(245,224,112,0.55), 0 2px 24px rgba(0,0,0,0.50)',
             }}
           >
             Gods Woord
@@ -83,11 +83,12 @@ export default function Hero() {
         {/* Subtext */}
         <p
           style={{
-            fontSize: 'clamp(14px, 1.05vw, 16.5px)',
+            fontSize: 'clamp(14px, 1.05vw, 17px)',
             lineHeight: 1.74,
-            color: 'rgba(245,240,232,0.68)',
+            color: 'rgba(255,252,245,0.88)',
             maxWidth: 420,
             marginTop: 18,
+            textShadow: '0 1px 12px rgba(0,0,0,0.50)',
           }}
         >
           Premium Bijbelse posters die je dagelijks herinneren aan
@@ -103,17 +104,19 @@ export default function Hero() {
         <div className="flex items-center gap-5" style={{ marginTop: 20 }}>
           <Link
             href="#customizer"
-            className="group relative inline-flex items-center justify-center gap-2.5 overflow-hidden rounded-full font-bold text-[13.5px] tracking-wide transition-all duration-300 hover:-translate-y-[2px] text-[#1A1A1A]"
+            className="group relative inline-flex items-center justify-center gap-2.5 overflow-hidden rounded-full font-bold text-[15px] tracking-wide transition-all duration-300 hover:-translate-y-[2px] hover:scale-[1.03]"
             style={{
-              background: '#C8A84B',
-              padding: '0 36px',
-              height: 56,
+              background: 'linear-gradient(135deg, #F0D060 0%, #C8A84B 60%, #A88830 100%)',
+              color: '#1A1200',
+              padding: '0 42px',
+              height: 62,
               boxShadow:
-                '0 8px 32px rgba(200,168,75,0.52), 0 2px 8px rgba(200,168,75,0.24)',
+                '0 0 0 1.5px rgba(255,255,255,0.28), 0 8px 40px rgba(200,168,75,0.80), 0 2px 12px rgba(200,168,75,0.40)',
               whiteSpace: 'nowrap',
+              letterSpacing: '0.01em',
             }}
           >
-            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/22 to-transparent pointer-events-none" />
+            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
             Kies jouw BibleSign
             <svg
               width="13"
@@ -130,8 +133,8 @@ export default function Hero() {
 
           <Link
             href="/collectie"
-            className="group inline-flex items-center gap-2 text-[13px] font-medium transition-colors duration-200 hover:text-[rgba(245,240,232,0.82)]"
-            style={{ color: 'rgba(245,240,232,0.44)' }}
+            className="group inline-flex items-center gap-2 text-[13px] font-medium transition-colors duration-200 hover:text-white"
+            style={{ color: 'rgba(255,252,245,0.72)', textShadow: '0 1px 8px rgba(0,0,0,0.40)' }}
           >
             Bekijk collectie
             <svg
@@ -167,7 +170,7 @@ export default function Hero() {
                     />
                   </svg>
                 </div>
-                <span style={{ fontSize: 11.5, color: 'rgba(245,240,232,0.48)' }}>
+                <span style={{ fontSize: 11.5, color: 'rgba(255,252,245,0.72)', textShadow: '0 1px 8px rgba(0,0,0,0.50)' }}>
                   {point}
                 </span>
               </div>
@@ -318,7 +321,7 @@ export default function Hero() {
                     />
                   </svg>
                 </div>
-                <span style={{ fontSize: 11.5, color: 'rgba(245,240,232,0.48)' }}>
+                <span style={{ fontSize: 11.5, color: 'rgba(255,252,245,0.72)', textShadow: '0 1px 8px rgba(0,0,0,0.50)' }}>
                   {point}
                 </span>
               </div>
