@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import FloatingPosterGallery from './FloatingPosterGallery'
-import SilkAuroraBackground from './SilkAuroraBackground'
 import PosterCard3D from './PosterCard3D'
 import { heroPosters } from '@/data/heroPosters'
 
@@ -17,10 +16,8 @@ export default function Hero() {
     <section
       id="home"
       className="relative overflow-hidden"
-      style={{ background: '#1A1A1A', minHeight: '100svh', paddingTop: 80 }}
+      style={{ background: 'transparent', minHeight: '100svh', paddingTop: 80 }}
     >
-      {/* Silk Aurora WebGL achtergrond */}
-      <SilkAuroraBackground />
 
       {/* ── Desktop: gecentraliseerde kolom ── */}
       <div

@@ -179,7 +179,7 @@ export default function BestSellers() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: '#0D0F14',
+        background: 'rgba(13,15,20,0.80)',
         paddingTop: 96,
         paddingBottom: 96,
         borderTop: '1px solid rgba(200,168,75,0.06)',

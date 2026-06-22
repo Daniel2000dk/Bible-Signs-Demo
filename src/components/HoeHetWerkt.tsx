@@ -45,7 +45,7 @@ export default function HoeHetWerkt() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: '#141618',
+        background: 'rgba(20,22,24,0.76)',
         paddingTop: 96,
         paddingBottom: 96,
         borderTop: '1px solid rgba(200,168,75,0.06)',

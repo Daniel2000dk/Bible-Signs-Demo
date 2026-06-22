@@ -13,7 +13,7 @@ export default function MissionCommunityTeaser() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: '#0A0C12',
+        background: 'rgba(10,12,18,0.80)',
         borderTop: '1px solid rgba(200,168,75,0.06)',
       }}
     >
@@ -149,7 +149,7 @@ export default function MissionCommunityTeaser() {
       {/* Community strip */}
       <div
         style={{
-          background: '#0F1218',
+          background: 'rgba(15,18,24,0.85)',
           borderTop: '1px solid rgba(200,168,75,0.08)',
           paddingTop: 56,
           paddingBottom: 60,

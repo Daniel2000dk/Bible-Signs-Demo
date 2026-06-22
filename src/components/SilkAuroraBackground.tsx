@@ -311,12 +311,12 @@ export function SilkAuroraBackground({
               'linear-gradient(90deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.06) 40%, rgba(0,0,0,0.38) 100%)',
           }}
         />
-        {/* Bodem darkening — sterk genoeg om aurora-ribbons te verbergen in CTA-zone */}
+        {/* Bodem vignette — subtiel, kleuronafhankelijk */}
         <div
           className="pointer-events-none absolute inset-x-0 bottom-0"
           style={{
-            height: '70%',
-            background: 'linear-gradient(to top, #1A1A1A 0%, #1A1A1A 18%, rgba(26,26,26,0.94) 34%, rgba(26,26,26,0.68) 52%, rgba(26,26,26,0.24) 72%, transparent 100%)',
+            height: '55%',
+            background: 'linear-gradient(to top, rgba(8,9,14,0.88) 0%, rgba(8,9,14,0.60) 28%, rgba(8,9,14,0.18) 60%, transparent 100%)',
           }}
         />
       </div>
