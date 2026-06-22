@@ -4,147 +4,180 @@ import Link from 'next/link'
 
 const reviews = [
   {
+    id: 1,
     name: 'Emma van den Berg',
     age: 22,
     location: 'Amsterdam',
     initials: 'EB',
-    avatarBg: 'rgba(139,105,20,0.26)',
-    text: 'Rustig, stijlvol en toch duidelijk Bijbels. Precies wat ik zocht voor mijn kamer.',
+    theme: 'IDENTITEIT',
+    text: 'Ik hing eerst van die zoete aquarel-prints — mooi, maar nooit echt van mij. Dit is anders. Het vers over nieuwe schepping hangt nu boven mijn bureau. Elke ochtend herinnert het me aan wie ik werkelijk ben in Christus.',
   },
   {
+    id: 2,
     name: 'Daan Hoekstra',
     age: 21,
     location: 'Utrecht',
     initials: 'DH',
-    avatarBg: 'rgba(58,90,74,0.28)',
-    text: 'Clean design met een diepe boodschap. Eindelijk iets dat echt bij mijn interieur past.',
+    theme: 'PREMIUM',
+    text: 'Als interieur-bewuste student was ik sceptisch over christelijke posters. Maar dit is gewoon goed design. De typografie, de verhoudingen, de lijst — je merkt dat er écht over nagedacht is. Dit is geen massaproduct.',
   },
   {
+    id: 3,
     name: 'Sara Mulder',
     age: 24,
     location: 'Rotterdam',
     initials: 'SM',
-    avatarBg: 'rgba(107,79,58,0.28)',
-    text: 'De combinatie van interieur en geloof klopt hier echt. Het brengt rust in mijn ruimte.',
+    theme: 'RUST',
+    text: 'Cadeau gekregen van mijn vriendin. Ik moest toegeven: dit hangt echt mooi. Nu een week later kijk ik er elke ochtend naar. Het brengt rust — niet alleen door het vers, maar ook door het design zelf.',
   },
   {
+    id: 4,
     name: 'Tobias de Wit',
     age: 20,
     location: 'Groningen',
     initials: 'TW',
-    avatarBg: 'rgba(74,58,107,0.26)',
-    text: 'Premium uitstraling, maar met een boodschap die je dagelijks raakt. Echt bijzonder.',
+    theme: 'STIJL',
+    text: 'Op mijn kamer hingen IKEA-prints en een christelijke poster uit de kerk. Nu hangt BibleSigns. Iedereen vraagt waar ik het vandaan heb. Dat zegt eigenlijk genoeg.',
   },
   {
+    id: 5,
     name: 'Lisa Bakker',
     age: 23,
     location: 'Zwolle',
     initials: 'LB',
-    avatarBg: 'rgba(90,58,58,0.28)',
-    text: 'Mooi minimalistisch design, maar met echte betekenis. Het voelt niet als gewone decoratie.',
+    theme: 'KWALITEIT',
+    text: 'Premium, stijlvol en Bijbels tegelijk — ik dacht niet dat die combinatie echt bestond. Maar dit is het. De poster van Psalm 23 maakt mijn slaapkamer compleet. Niet als religieus symbool, maar als echte kunst.',
   },
   {
+    id: 6,
     name: 'Joris Vermeer',
     age: 25,
     location: 'Den Haag',
     initials: 'JV',
-    avatarBg: 'rgba(47,74,74,0.26)',
-    text: 'Niet schreeuwerig, maar juist krachtig door de eenvoud. Elke ochtend herinnert het me.',
+    theme: 'DIEPGANG',
+    text: 'De kwaliteit is opvallend. Het papier, de dikte, de manier waarop het vers ademruimte krijgt. Dit is niet iets wat je snel weggooit. Dit hangt er over tien jaar nog — en de boodschap is dan nog steeds onveranderd.',
   },
   {
+    id: 7,
     name: 'Noa de Vries',
     age: 22,
     location: 'Eindhoven',
     initials: 'NV',
-    avatarBg: 'rgba(74,74,47,0.26)',
-    text: 'Ik was verrast door hoe luxe het eruitziet. Past perfect in mijn slaapkamer.',
+    theme: 'BALANS',
+    text: 'Ik was bang dat het te kerkelijk zou aanvoelen. Maar dit is gewoon interieur. Sterk. Modern. Met een boodschap. Dat evenwicht dat ik zocht — hier is het. Voelt aan als jezelf ophangen, maar dan mooier.',
   },
   {
+    id: 8,
     name: 'Matthijs Jansen',
     age: 26,
     location: 'Arnhem',
     initials: 'MJ',
-    avatarBg: 'rgba(58,74,90,0.26)',
-    text: 'Het voelt als decoratie met diepgang. Gods Woord dagelijks zichtbaar — precies de bedoeling.',
+    theme: 'COLLECTIE',
+    text: 'Begon met één. Nu drie. Ze vullen elkaar prachtig aan in de woonkamer. Gasten vragen altijd wie het design heeft gemaakt — en dan vertel je het verhaal erachter. Dat is het mooie aan dit merk.',
   },
 ]
 
 function ReviewCard({ review }: { review: typeof reviews[0] }) {
   return (
-    <div
-      className="shrink-0 w-[320px] md:w-[344px] mr-5 flex flex-col gap-5 p-7 rounded-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+    <article
+      className="shrink-0 mr-5 flex flex-col gap-0 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(145deg, rgba(30,26,18,0.97) 0%, rgba(20,16,10,0.99) 100%)',
-        border: '1px solid rgba(245,240,232,0.07)',
-        borderLeft: '2px solid rgba(200,168,75,0.42)',
+        width: 348,
+        background: 'linear-gradient(145deg, rgba(20,17,11,0.97) 0%, rgba(12,10,6,0.99) 100%)',
+        border: '1px solid rgba(200,168,75,0.10)',
+        borderLeft: '1.5px solid rgba(200,168,75,0.40)',
+        borderRadius: 16,
         boxShadow:
-          '0 4px 12px rgba(0,0,0,0.52), 0 14px 44px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.055)',
+          '0 2px 0 rgba(255,255,255,0.028) inset, 0 8px 32px rgba(0,0,0,0.56), 0 28px 72px rgba(0,0,0,0.32)',
       }}
     >
-      {/* Decorative large quote — depth element */}
-      <span
-        className="absolute top-2 right-4 select-none pointer-events-none font-serif"
-        style={{
-          fontSize: 88,
-          lineHeight: 1,
-          color: 'rgba(200,168,75,0.07)',
-          fontFamily: 'Georgia, "Playfair Display", serif',
-        }}
-        aria-hidden
-      >
-        &rdquo;
-      </span>
+      {/* Top section */}
+      <div className="flex flex-col gap-4 p-7 pb-5 flex-1">
+        {/* Header: stars + theme */}
+        <div className="flex items-center justify-between">
+          <div className="flex gap-[3px]">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} width="11" height="11" viewBox="0 0 24 24" fill="#C8A84B">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            ))}
+          </div>
+          <span
+            style={{
+              fontSize: 8.5,
+              fontWeight: 700,
+              letterSpacing: '0.22em',
+              color: 'rgba(200,168,75,0.55)',
+              fontFamily: 'var(--font-inter)',
+            }}
+          >
+            {review.theme}
+          </span>
+        </div>
 
-      {/* Stars */}
-      <div className="flex gap-[3px]">
-        {[...Array(5)].map((_, i) => (
-          <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#C8A84B">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-        ))}
+        {/* Large decorative quote glyph */}
+        <span
+          className="absolute top-3 right-5 select-none pointer-events-none font-serif"
+          style={{
+            fontSize: 96,
+            lineHeight: 1,
+            color: 'rgba(200,168,75,0.055)',
+            fontFamily: 'Georgia, serif',
+          }}
+          aria-hidden
+        >
+          &rdquo;
+        </span>
+
+        {/* Review text */}
+        <p
+          className="font-serif italic relative z-10 flex-1"
+          style={{
+            fontSize: 15,
+            lineHeight: 1.68,
+            color: 'rgba(245,240,232,0.86)',
+          }}
+        >
+          &ldquo;{review.text}&rdquo;
+        </p>
       </div>
 
-      {/* Quote */}
-      <p
-        className="font-serif flex-1 relative z-10 italic"
+      {/* Separator */}
+      <div
         style={{
-          fontSize: 15.5,
-          lineHeight: 1.65,
-          color: 'rgba(245,240,232,0.88)',
+          height: 1,
+          marginLeft: 28,
+          marginRight: 28,
+          background: 'rgba(200,168,75,0.10)',
         }}
-      >
-        &ldquo;{review.text}&rdquo;
-      </p>
+      />
 
-      {/* Author */}
-      <div className="flex items-center gap-3 pt-1">
+      {/* Author section */}
+      <div className="flex items-center gap-3 px-7 py-5">
         <div
-          className="w-9 h-9 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0"
+          className="flex items-center justify-center rounded-full shrink-0 font-bold"
           style={{
-            background: review.avatarBg,
-            border: '1px solid rgba(200,168,75,0.30)',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.32)',
-            color: 'rgba(245,240,232,0.90)',
+            width: 36,
+            height: 36,
+            background: 'rgba(200,168,75,0.11)',
+            border: '1px solid rgba(200,168,75,0.28)',
+            color: 'rgba(200,168,75,0.90)',
+            fontSize: 11,
+            letterSpacing: '0.04em',
           }}
         >
           {review.initials}
         </div>
         <div>
-          <p
-            className="text-[12.5px] font-semibold leading-tight"
-            style={{ color: 'rgba(245,240,232,0.90)' }}
-          >
+          <p style={{ fontSize: 12.5, fontWeight: 600, color: 'rgba(245,240,232,0.88)' }}>
             {review.name}
           </p>
-          <p
-            className="text-[11px] mt-0.5"
-            style={{ color: 'rgba(245,240,232,0.38)' }}
-          >
+          <p style={{ fontSize: 11, marginTop: 2, color: 'rgba(245,240,232,0.35)' }}>
             {review.age} jaar · {review.location}
           </p>
         </div>
       </div>
-    </div>
+    </article>
   )
 }
 
@@ -153,67 +186,83 @@ export default function MovingReviews() {
 
   return (
     <section
-      className="relative pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden"
-      style={{ background: '#1A1A1A' }}
+      className="relative overflow-hidden"
+      style={{
+        background: '#111214',
+        paddingTop: 96,
+        paddingBottom: 88,
+        borderTop: '1px solid rgba(200,168,75,0.07)',
+      }}
     >
-      {/* Gradient connector */}
-      <div
-        className="absolute top-0 left-0 right-0 pointer-events-none"
-        style={{
-          height: 80,
-          background: 'linear-gradient(180deg, rgba(245,240,232,0.055) 0%, transparent 100%)',
-        }}
-      />
-
-      {/* Subtle warm glow */}
+      {/* Ambient glow */}
       <div
         className="absolute pointer-events-none"
         style={{
-          top: '30%',
+          top: '20%',
           left: '50%',
           transform: 'translateX(-50%)',
-          width: '60%',
-          height: 300,
-          background: 'radial-gradient(ellipse, rgba(200,168,75,0.05) 0%, transparent 70%)',
+          width: '55%',
+          height: 360,
+          background: 'radial-gradient(ellipse, rgba(200,168,75,0.04) 0%, transparent 70%)',
         }}
       />
 
       {/* Section header */}
-      <div className="max-w-[1320px] mx-auto px-6 md:px-10 mb-12">
-        <div className="flex flex-col md:flex-row md:items-end gap-6 justify-between">
-          <div className="flex flex-col gap-3 max-w-[520px]">
+      <div className="max-w-[1320px] mx-auto px-6 md:px-10 mb-14">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
 
-            {/* Eyebrow with line */}
-            <div className="inline-flex items-center gap-3 self-start">
-              <span
-                className="block shrink-0"
+          <div className="flex flex-col gap-4 max-w-[560px]">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3">
+              <div
                 style={{
-                  width: 22,
+                  width: 28,
                   height: 1,
-                  background: 'linear-gradient(90deg, #C8A84B 0%, rgba(200,168,75,0.3) 100%)',
+                  background: 'linear-gradient(90deg, transparent 0%, #C8A84B 100%)',
+                  flexShrink: 0,
                 }}
               />
-              <span className="text-[10px] font-bold tracking-[0.32em] uppercase text-[#C8A84B]">
+              <span
+                style={{
+                  fontSize: 9,
+                  fontWeight: 700,
+                  letterSpacing: '0.30em',
+                  textTransform: 'uppercase',
+                  color: '#C8A84B',
+                }}
+              >
                 Ervaringen van klanten
               </span>
+              <div
+                style={{
+                  width: 28,
+                  height: 1,
+                  background: 'linear-gradient(90deg, #C8A84B 0%, transparent 100%)',
+                  flexShrink: 0,
+                }}
+              />
             </div>
 
-            <h2 className="font-serif text-[28px] md:text-[36px] font-bold text-[#F5F0E8] leading-tight">
-              Gemaakt voor kamers waar geloof
-              <br className="hidden sm:block" /> dagelijks zichtbaar mag zijn.
-            </h2>
-            <p
-              className="text-[14px] leading-relaxed mt-0.5"
-              style={{ color: 'rgba(245,240,232,0.45)' }}
+            <h2
+              className="font-serif font-bold text-[#F5F0E8] leading-[1.12]"
+              style={{ fontSize: 'clamp(26px, 3vw, 38px)' }}
             >
-              Ontdek hoe anderen BibleSigns ervaren in hun interieur.
+              Gemaakt voor kamers waar
+              <br />
+              <span style={{ color: '#C8A84B' }}>geloof</span>{' '}
+              dagelijks zichtbaar mag zijn.
+            </h2>
+
+            <p style={{ fontSize: 14, color: 'rgba(245,240,232,0.42)', lineHeight: 1.7, marginTop: 2 }}>
+              Echte ervaringen van de BibleSigns community.
             </p>
           </div>
 
           {/* Desktop CTA */}
           <Link
             href="/collectie"
-            className="group hidden md:inline-flex items-center gap-2 text-[13px] font-medium text-[#C8A84B] hover:text-[#D4B55E] transition-colors shrink-0 mb-1"
+            className="group hidden md:inline-flex items-center gap-2 shrink-0 mb-1 transition-colors duration-200 text-[rgba(200,168,75,0.70)] hover:text-[#C8A84B]"
+            style={{ fontSize: 13, fontWeight: 500 }}
           >
             Bekijk collectie
             <svg
@@ -227,12 +276,29 @@ export default function MovingReviews() {
         </div>
       </div>
 
-      {/* Marquee — animation unchanged */}
-      <div className="relative group">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#1A1A1A] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#1A1A1A] to-transparent z-10 pointer-events-none" />
+      {/* Marquee track */}
+      <div className="relative">
+        {/* Left fade */}
+        <div
+          className="absolute left-0 top-0 bottom-0 pointer-events-none z-10"
+          style={{
+            width: 100,
+            background: 'linear-gradient(90deg, #111214 0%, transparent 100%)',
+          }}
+        />
+        {/* Right fade */}
+        <div
+          className="absolute right-0 top-0 bottom-0 pointer-events-none z-10"
+          style={{
+            width: 100,
+            background: 'linear-gradient(270deg, #111214 0%, transparent 100%)',
+          }}
+        />
 
-        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] pl-6">
+        <div
+          className="flex w-max animate-marquee"
+          style={{ paddingLeft: 24 }}
+        >
           {duplicated.map((review, i) => (
             <ReviewCard key={i} review={review} />
           ))}
@@ -240,22 +306,18 @@ export default function MovingReviews() {
       </div>
 
       {/* Mobile CTA */}
-      <div className="md:hidden max-w-[1320px] mx-auto px-6 mt-8">
+      <div className="md:hidden max-w-[1320px] mx-auto px-6 mt-10">
         <Link
           href="/collectie"
-          className="group inline-flex items-center gap-2 text-[13px] font-medium text-[#C8A84B]"
+          className="inline-flex items-center gap-2"
+          style={{ fontSize: 13, fontWeight: 500, color: '#C8A84B' }}
         >
           Bekijk collectie
-          <svg
-            width="13" height="13" viewBox="0 0 14 14"
-            fill="none" stroke="currentColor" strokeWidth="1.8"
-            className="group-hover:translate-x-0.5 transition-transform"
-          >
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.8">
             <path d="M2 7h10M7 2l5 5-5 5" />
           </svg>
         </Link>
       </div>
-
     </section>
   )
 }

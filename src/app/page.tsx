@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import MovingReviews from '@/components/MovingReviews'
 import BestSellers from '@/components/BestSellers'
+import HoeHetWerkt from '@/components/HoeHetWerkt'
 import MissionCommunityTeaser from '@/components/MissionCommunityTeaser'
 import Footer from '@/components/Footer'
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <MovingReviews />
       <BestSellers />
+      <HoeHetWerkt />
       <MissionCommunityTeaser />
       <Footer />
     </main>
