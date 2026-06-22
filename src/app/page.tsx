@@ -14,10 +14,10 @@ export default function Home() {
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
         <SilkAuroraBackground
           interactive={false}
-          intensity={0.22}
-          sheenColor="#1C1810"
-          accentColor="#6B5020"
-          grain={0.60}
+          intensity={0.35}
+          sheenColor="#2E2416"
+          accentColor="#8B6828"
+          grain={0.52}
         />
       </div>
 
