@@ -125,15 +125,6 @@ export default function FloatingPosterGallery() {
           }}
         />
 
-        {/* Bodem fade → naadloos in transparante achtergrond */}
-        <div
-          className="absolute bottom-0 left-0 right-0 pointer-events-none"
-          style={{
-            height: 110,
-            background: 'linear-gradient(to top, rgba(10,10,14,0.85) 0%, transparent 100%)',
-            zIndex: 45,
-          }}
-        />
 
         {heroPosters.map((poster, index) => (
           <div
