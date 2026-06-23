@@ -189,7 +189,7 @@ export default function MovingReviews() {
       className="relative overflow-hidden"
       style={{
         background: 'transparent',
-        paddingTop: 20,
+        paddingTop: 8,
         paddingBottom: 88,
       }}
     >

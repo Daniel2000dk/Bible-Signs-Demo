@@ -17,9 +17,8 @@ export default function Hero() {
         backgroundPosition: '58% center',
         backgroundRepeat: 'no-repeat',
         backgroundColor: '#080604',
-        minHeight: '78vh',
-        maskImage: 'linear-gradient(to bottom, black 0%, black 90%, transparent 100%)',
-        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 90%, transparent 100%)',
+        maskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
       }}
     >
       {/* Links scrim — tekst leesbaarheid */}
@@ -59,8 +58,8 @@ export default function Hero() {
 
       {/* ── Desktop ── */}
       <div
-        className="hidden lg:flex items-center relative"
-        style={{ minHeight: '100vh', zIndex: 2 }}
+        className="hidden lg:flex items-start relative"
+        style={{ zIndex: 2 }}
       >
         <div
           className="flex flex-col animate-fade-up"
@@ -68,8 +67,8 @@ export default function Hero() {
             flex: '0 0 50%',
             paddingLeft: 'clamp(64px, 7.5vw, 116px)',
             paddingRight: 48,
-            paddingTop: 100,
-            paddingBottom: 44,
+            paddingTop: 112,
+            paddingBottom: 56,
           }}
         >
           {/* Eyebrow */}
@@ -241,7 +240,7 @@ export default function Hero() {
       {/* ── Mobile ── */}
       <div
         className="lg:hidden flex flex-col relative"
-        style={{ zIndex: 2, minHeight: '100svh' }}
+        style={{ zIndex: 2 }}
       >
         <div className="flex flex-col items-center text-center gap-5 px-6 pt-24 pb-10 animate-fade-up">
           <div className="flex items-center gap-2">
