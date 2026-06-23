@@ -16,7 +16,10 @@ export default function Hero() {
         backgroundSize: 'auto 82%',
         backgroundPosition: '58% center',
         backgroundRepeat: 'no-repeat',
-        minHeight: '88vh',
+        backgroundColor: '#080604',
+        minHeight: '78vh',
+        maskImage: 'linear-gradient(to bottom, black 0%, black 90%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 90%, transparent 100%)',
       }}
     >
       {/* Links scrim — tekst leesbaarheid */}
@@ -28,11 +31,11 @@ export default function Hero() {
           zIndex: 1,
         }}
       />
-      {/* Bodem scrim — transparant aan de rand, piek middenin voor diepte */}
+      {/* Bodem scrim */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, transparent 0%, rgba(4,3,2,0.58) 15%, transparent 36%)',
+          background: 'linear-gradient(to top, rgba(4,3,2,0.55) 0%, rgba(4,3,2,0.05) 22%, transparent 40%)',
           zIndex: 1,
         }}
       />
@@ -66,7 +69,7 @@ export default function Hero() {
             paddingLeft: 'clamp(64px, 7.5vw, 116px)',
             paddingRight: 48,
             paddingTop: 100,
-            paddingBottom: 88,
+            paddingBottom: 44,
           }}
         >
           {/* Eyebrow */}
