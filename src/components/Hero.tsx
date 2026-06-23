@@ -1,7 +1,4 @@
 import Link from 'next/link'
-import FloatingPosterGallery from './FloatingPosterGallery'
-import PosterCard3D from './PosterCard3D'
-import { heroPosters } from '@/data/heroPosters'
 
 const trustPoints = [
   'Gratis verzending boven €50',
@@ -9,48 +6,58 @@ const trustPoints = [
   'Premium printkwaliteit',
 ]
 
-const MOBILE_POSTERS = heroPosters.slice(0, 8)
-
 export default function Hero() {
   return (
     <section
       id="home"
       className="relative overflow-hidden"
-      style={{ background: 'transparent' }}
+      style={{
+        backgroundImage: "url('/hero-bg.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '100vh',
+      }}
     >
-      {/* Subtiele links-scrim voor tekst leesbaarheid */}
-      <div
-        className="hidden lg:block absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'linear-gradient(90deg, rgba(8,6,4,0.52) 0%, rgba(8,6,4,0.28) 36%, rgba(8,6,4,0.06) 58%, transparent 74%)',
-          zIndex: 1,
-        }}
-      />
-      {/* Bodem-scrim */}
+      {/* Links scrim — tekst leesbaarheid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(to top, rgba(8,6,4,0.55) 0%, rgba(8,6,4,0.08) 24%, transparent 44%)',
+            'linear-gradient(90deg, rgba(4,3,2,0.92) 0%, rgba(4,3,2,0.80) 22%, rgba(4,3,2,0.50) 42%, rgba(4,3,2,0.12) 62%, transparent 76%)',
+          zIndex: 1,
+        }}
+      />
+      {/* Bodem scrim */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to top, rgba(4,3,2,0.70) 0%, rgba(4,3,2,0.08) 26%, transparent 48%)',
+          zIndex: 1,
+        }}
+      />
+      {/* Boven scrim */}
+      <div
+        className="absolute inset-x-0 top-0 pointer-events-none"
+        style={{
+          height: 140,
+          background: 'linear-gradient(to bottom, rgba(4,3,2,0.55) 0%, transparent 100%)',
           zIndex: 1,
         }}
       />
 
-      {/* ── Desktop: tekst links | gallery rechts ── */}
+      {/* ── Desktop ── */}
       <div
         className="hidden lg:flex items-center relative"
         style={{ minHeight: '100vh', zIndex: 2 }}
       >
-
-        {/* Linker tekstkolom */}
         <div
           className="flex flex-col animate-fade-up"
           style={{
-            flex: '0 0 44%',
+            flex: '0 0 50%',
             paddingLeft: 'clamp(64px, 7.5vw, 116px)',
-            paddingRight: 44,
-            paddingTop: 96,
+            paddingRight: 48,
+            paddingTop: 100,
             paddingBottom: 88,
           }}
         >
@@ -77,7 +84,7 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Headline — max 3 regels */}
+          {/* Headline */}
           <h1
             className="font-bold text-white"
             style={{
@@ -85,7 +92,7 @@ export default function Hero() {
               fontSize: 'clamp(44px, 4.8vw, 74px)',
               lineHeight: 1.03,
               letterSpacing: '-0.022em',
-              textShadow: '0 2px 36px rgba(0,0,0,0.75)',
+              textShadow: '0 2px 36px rgba(0,0,0,0.80)',
               marginBottom: 22,
             }}
           >
@@ -93,8 +100,7 @@ export default function Hero() {
             <span
               style={{
                 color: '#F5E070',
-                textShadow:
-                  '0 0 44px rgba(245,224,112,0.52), 0 2px 24px rgba(0,0,0,0.55)',
+                textShadow: '0 0 44px rgba(245,224,112,0.55), 0 2px 24px rgba(0,0,0,0.60)',
               }}
             >
               Gods Woord
@@ -113,22 +119,21 @@ export default function Hero() {
               color: 'rgba(255,252,245,0.86)',
               maxWidth: 400,
               marginBottom: 40,
-              textShadow: '0 1px 14px rgba(0,0,0,0.55)',
+              textShadow: '0 1px 14px rgba(0,0,0,0.60)',
             }}
           >
             Premium Bijbelse posters voor jongeren en jongvolwassenen
             die Gods Woord zichtbaar willen maken in hun kamer.
           </p>
 
-          {/* CTA knoppen */}
+          {/* CTA */}
           <div className="flex items-center gap-6" style={{ marginBottom: 30 }}>
             <Link
               href="#customizer"
               className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full font-bold tracking-wide transition-all duration-300 hover:-translate-y-[2px] hover:scale-[1.025]"
               style={{
                 fontSize: 15,
-                background:
-                  'linear-gradient(135deg, #F2D458 0%, #C8A84B 55%, #A88830 100%)',
+                background: 'linear-gradient(135deg, #F2D458 0%, #C8A84B 55%, #A88830 100%)',
                 color: '#160F00',
                 padding: '0 52px',
                 height: 66,
@@ -138,7 +143,6 @@ export default function Hero() {
                 letterSpacing: '0.015em',
               }}
             >
-              {/* Hover shine */}
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/28 to-transparent pointer-events-none" />
               Kies jouw BibleSign
               <svg
@@ -200,8 +204,8 @@ export default function Hero() {
                   <span
                     style={{
                       fontSize: 12.5,
-                      color: 'rgba(255,252,245,0.80)',
-                      textShadow: '0 1px 8px rgba(0,0,0,0.50)',
+                      color: 'rgba(255,252,245,0.82)',
+                      textShadow: '0 1px 8px rgba(0,0,0,0.55)',
                     }}
                   >
                     {point}
@@ -221,86 +225,20 @@ export default function Hero() {
             ))}
           </div>
         </div>
-
-        {/* Rechter gallerij-kolom */}
-        <div
-          className="relative"
-          style={{ flex: '0 0 56%', height: '100vh', overflow: 'hidden' }}
-        >
-          {/* Links: naadloze blend naar aurora */}
-          <div
-            className="absolute inset-y-0 left-0 pointer-events-none"
-            style={{
-              width: 260,
-              background:
-                'linear-gradient(to right, rgba(8,6,4,0.96) 0%, rgba(8,6,4,0.60) 38%, rgba(8,6,4,0.14) 68%, transparent 100%)',
-              zIndex: 10,
-            }}
-          />
-          {/* Boven */}
-          <div
-            className="absolute inset-x-0 top-0 pointer-events-none"
-            style={{
-              height: 180,
-              background: 'linear-gradient(to bottom, rgba(8,6,4,0.80) 0%, transparent 100%)',
-              zIndex: 10,
-            }}
-          />
-          {/* Onder */}
-          <div
-            className="absolute inset-x-0 bottom-0 pointer-events-none"
-            style={{
-              height: 180,
-              background: 'linear-gradient(to top, rgba(8,6,4,0.80) 0%, transparent 100%)',
-              zIndex: 10,
-            }}
-          />
-
-          {/* Gallery — verticaal gecentreerd, licht naar rechts */}
-          <div
-            className="absolute inset-0 flex items-center"
-            style={{ paddingLeft: '8%' }}
-          >
-            <FloatingPosterGallery />
-          </div>
-        </div>
       </div>
 
       {/* ── Mobile ── */}
       <div
         className="lg:hidden flex flex-col relative"
-        style={{ zIndex: 2, paddingTop: 80, paddingBottom: 48 }}
+        style={{ zIndex: 2, minHeight: '100svh' }}
       >
-        <div className="flex flex-col items-center text-center gap-5 px-6 pt-8 pb-6 animate-fade-up">
-          {/* Eyebrow */}
+        <div className="flex flex-col items-center text-center gap-5 px-6 pt-24 pb-10 animate-fade-up">
           <div className="flex items-center gap-2">
-            <div
-              style={{
-                width: 20,
-                height: 1,
-                background: 'linear-gradient(90deg, rgba(200,168,75,0.1) 0%, #C8A84B 100%)',
-                flexShrink: 0,
-              }}
-            />
-            <span
-              style={{
-                fontSize: 9,
-                fontWeight: 700,
-                letterSpacing: '0.28em',
-                textTransform: 'uppercase',
-                color: '#C8A84B',
-              }}
-            >
+            <div style={{ width: 20, height: 1, background: 'linear-gradient(90deg, rgba(200,168,75,0.1) 0%, #C8A84B 100%)', flexShrink: 0 }} />
+            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.28em', textTransform: 'uppercase', color: '#C8A84B' }}>
               Premium Bijbelse Wanddecoratie
             </span>
-            <div
-              style={{
-                width: 20,
-                height: 1,
-                background: 'linear-gradient(90deg, #C8A84B 0%, rgba(200,168,75,0.1) 100%)',
-                flexShrink: 0,
-              }}
-            />
+            <div style={{ width: 20, height: 1, background: 'linear-gradient(90deg, #C8A84B 0%, rgba(200,168,75,0.1) 100%)', flexShrink: 0 }} />
           </div>
 
           <h1
@@ -310,7 +248,7 @@ export default function Hero() {
               fontSize: 'clamp(34px, 9vw, 52px)',
               lineHeight: 1.06,
               letterSpacing: '-0.02em',
-              textShadow: '0 2px 32px rgba(0,0,0,0.80)',
+              textShadow: '0 2px 32px rgba(0,0,0,0.85)',
             }}
           >
             Maak{' '}
@@ -323,15 +261,7 @@ export default function Hero() {
             jouw ruimte.
           </h1>
 
-          <p
-            style={{
-              fontSize: 15.5,
-              lineHeight: 1.68,
-              color: 'rgba(245,240,232,0.72)',
-              maxWidth: 320,
-              textShadow: '0 1px 12px rgba(0,0,0,0.60)',
-            }}
-          >
+          <p style={{ fontSize: 15.5, lineHeight: 1.68, color: 'rgba(245,240,232,0.75)', maxWidth: 320, textShadow: '0 1px 12px rgba(0,0,0,0.65)' }}>
             Premium Bijbelse posters voor jongeren en jongvolwassenen
             die Gods Woord zichtbaar willen maken in hun kamer.
           </p>
@@ -346,64 +276,28 @@ export default function Hero() {
                 color: '#160F00',
                 padding: '0 32px',
                 height: 54,
-                boxShadow:
-                  '0 0 0 1.5px rgba(255,255,255,0.20), 0 6px 26px rgba(200,168,75,0.55)',
+                boxShadow: '0 0 0 1.5px rgba(255,255,255,0.20), 0 6px 26px rgba(200,168,75,0.55)',
               }}
             >
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
               Kies jouw BibleSign
-              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2">
-                <path d="M2 7h10M7 2l5 5-5 5" />
-              </svg>
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M2 7h10M7 2l5 5-5 5" /></svg>
             </Link>
-
-            <Link
-              href="/collectie"
-              className="inline-flex items-center gap-1.5 font-medium"
-              style={{ fontSize: 14, color: 'rgba(245,240,232,0.62)', textShadow: '0 1px 8px rgba(0,0,0,0.50)' }}
-            >
+            <Link href="/collectie" className="inline-flex items-center gap-1.5 font-medium" style={{ fontSize: 14, color: 'rgba(245,240,232,0.65)', textShadow: '0 1px 8px rgba(0,0,0,0.55)' }}>
               Bekijk collectie
-              <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.85">
-                <path d="M2 7h10M7 2l5 5-5 5" />
-              </svg>
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.85"><path d="M2 7h10M7 2l5 5-5 5" /></svg>
             </Link>
           </div>
 
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
             {trustPoints.map(point => (
               <div key={point} className="flex items-center gap-1.5">
-                <div
-                  className="flex items-center justify-center rounded-full shrink-0"
-                  style={{ width: 15, height: 15, background: 'rgba(200,168,75,0.15)' }}
-                >
+                <div className="flex items-center justify-center rounded-full shrink-0" style={{ width: 15, height: 15, background: 'rgba(200,168,75,0.15)' }}>
                   <svg width="6" height="6" viewBox="0 0 10 10" fill="none">
                     <path d="M2 5l2.5 2.5 3.5-4" stroke="#C8A84B" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span style={{ fontSize: 12.5, color: 'rgba(255,252,245,0.80)', textShadow: '0 1px 8px rgba(0,0,0,0.55)' }}>
-                  {point}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile posterstrip */}
-        <div
-          style={{
-            overflowX: 'auto',
-            overflowY: 'hidden',
-            scrollSnapType: 'x mandatory',
-            scrollbarWidth: 'none',
-            WebkitOverflowScrolling: 'touch',
-            paddingBottom: 8,
-            paddingTop: 12,
-          }}
-        >
-          <div style={{ display: 'flex', gap: 14, paddingLeft: 24, paddingRight: 24, width: 'max-content' }}>
-            {MOBILE_POSTERS.map(poster => (
-              <div key={poster.id} style={{ scrollSnapAlign: 'center', flexShrink: 0 }}>
-                <PosterCard3D poster={poster} width={130} height={182} />
+                <span style={{ fontSize: 12.5, color: 'rgba(255,252,245,0.82)', textShadow: '0 1px 8px rgba(0,0,0,0.55)' }}>{point}</span>
               </div>
             ))}
           </div>
