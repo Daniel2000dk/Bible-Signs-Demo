@@ -13,9 +13,10 @@ export default function Hero() {
       className="relative overflow-hidden"
       style={{
         backgroundImage: "url('/hero-bg.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
+        backgroundSize: 'auto 82%',
+        backgroundPosition: '62% center',
         backgroundRepeat: 'no-repeat',
+        backgroundColor: '#080604',
         minHeight: '100vh',
       }}
     >
@@ -89,7 +90,7 @@ export default function Hero() {
             className="font-bold text-white"
             style={{
               fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif",
-              fontSize: 'clamp(44px, 4.8vw, 74px)',
+              fontSize: 'clamp(52px, 5.5vw, 84px)',
               lineHeight: 1.03,
               letterSpacing: '-0.022em',
               textShadow: '0 2px 36px rgba(0,0,0,0.80)',
