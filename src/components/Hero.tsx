@@ -14,7 +14,7 @@ export default function Hero() {
       style={{
         backgroundImage: "url('/hero-bg.jpg')",
         backgroundSize: 'auto 82%',
-        backgroundPosition: '62% center',
+        backgroundPosition: '58% center',
         backgroundRepeat: 'no-repeat',
         backgroundColor: '#080604',
         minHeight: '100vh',
@@ -37,12 +37,20 @@ export default function Hero() {
           zIndex: 1,
         }}
       />
-      {/* Boven scrim */}
+      {/* Boven scrim — sterk genoeg voor transparante navbar */}
       <div
         className="absolute inset-x-0 top-0 pointer-events-none"
         style={{
-          height: 140,
-          background: 'linear-gradient(to bottom, rgba(4,3,2,0.55) 0%, transparent 100%)',
+          height: 220,
+          background: 'linear-gradient(to bottom, rgba(4,3,2,0.82) 0%, rgba(4,3,2,0.48) 42%, transparent 100%)',
+          zIndex: 1,
+        }}
+      />
+      {/* Rechts diepte-vignette — gallery perspectief */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 50% 64% at 80% 50%, transparent 0%, rgba(4,3,2,0.14) 52%, rgba(4,3,2,0.40) 100%)',
           zIndex: 1,
         }}
       />
@@ -91,17 +99,17 @@ export default function Hero() {
             style={{
               fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif",
               fontSize: 'clamp(52px, 5.5vw, 84px)',
-              lineHeight: 1.03,
+              lineHeight: 1.08,
               letterSpacing: '-0.022em',
               textShadow: '0 2px 36px rgba(0,0,0,0.80)',
-              marginBottom: 22,
+              marginBottom: 30,
             }}
           >
             Maak{' '}
             <span
               style={{
                 color: '#F5E070',
-                textShadow: '0 0 44px rgba(245,224,112,0.55), 0 2px 24px rgba(0,0,0,0.60)',
+                textShadow: '0 0 44px rgba(245,224,112,0.38), 0 2px 24px rgba(0,0,0,0.60)',
               }}
             >
               Gods Woord
@@ -115,11 +123,11 @@ export default function Hero() {
           {/* Subtekst */}
           <p
             style={{
-              fontSize: 'clamp(15px, 1.12vw, 17.5px)',
-              lineHeight: 1.72,
-              color: 'rgba(255,252,245,0.86)',
-              maxWidth: 400,
-              marginBottom: 40,
+              fontSize: 'clamp(16px, 1.18vw, 18px)',
+              lineHeight: 1.74,
+              color: 'rgba(255,252,245,0.91)',
+              maxWidth: 420,
+              marginBottom: 46,
               textShadow: '0 1px 14px rgba(0,0,0,0.60)',
             }}
           >
@@ -164,18 +172,18 @@ export default function Hero() {
               className="group inline-flex items-center gap-2 font-medium transition-colors duration-200 hover:text-white"
               style={{
                 fontSize: 14,
-                color: 'rgba(255,252,245,0.78)',
+                color: 'rgba(255,252,245,0.84)',
                 textShadow: '0 1px 8px rgba(0,0,0,0.45)',
               }}
             >
               Bekijk collectie
               <svg
-                width="12"
-                height="12"
+                width="13"
+                height="13"
                 viewBox="0 0 14 14"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.1"
                 className="group-hover:translate-x-0.5 transition-transform duration-200"
               >
                 <path d="M2 7h10M7 2l5 5-5 5" />
@@ -184,19 +192,19 @@ export default function Hero() {
           </div>
 
           {/* USP's */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-6">
             {trustPoints.map((point, i) => (
-              <div key={point} className="flex items-center gap-5">
-                <div className="flex items-center gap-2">
+              <div key={point} className="flex items-center gap-6">
+                <div className="flex items-center gap-2.5">
                   <div
                     className="flex items-center justify-center rounded-full shrink-0"
-                    style={{ width: 16, height: 16, background: 'rgba(200,168,75,0.16)' }}
+                    style={{ width: 17, height: 17, background: 'rgba(200,168,75,0.18)' }}
                   >
                     <svg width="7" height="7" viewBox="0 0 10 10" fill="none">
                       <path
                         d="M2 5l2.5 2.5 3.5-4"
                         stroke="#C8A84B"
-                        strokeWidth="1.6"
+                        strokeWidth="1.7"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
@@ -204,8 +212,8 @@ export default function Hero() {
                   </div>
                   <span
                     style={{
-                      fontSize: 12.5,
-                      color: 'rgba(255,252,245,0.82)',
+                      fontSize: 13.5,
+                      color: 'rgba(255,252,245,0.88)',
                       textShadow: '0 1px 8px rgba(0,0,0,0.55)',
                     }}
                   >
@@ -216,8 +224,8 @@ export default function Hero() {
                   <div
                     style={{
                       width: 1,
-                      height: 14,
-                      background: 'rgba(245,240,232,0.12)',
+                      height: 15,
+                      background: 'rgba(245,240,232,0.14)',
                       flexShrink: 0,
                     }}
                   />
