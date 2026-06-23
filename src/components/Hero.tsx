@@ -16,17 +16,12 @@ export default function Hero() {
         backgroundSize: 'auto 82%',
         backgroundPosition: '58% center',
         backgroundRepeat: 'no-repeat',
+        backgroundColor: '#080604',
         minHeight: '100vh',
+        maskImage: 'linear-gradient(to bottom, black 0%, black 86%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 86%, transparent 100%)',
       }}
     >
-      {/* Donkere achtergrond — vervaagt onderaan voor naadloze overgang */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to bottom, rgba(4,3,2,0.97) 0%, rgba(4,3,2,0.94) 46%, rgba(4,3,2,0.60) 74%, transparent 100%)',
-          zIndex: 0,
-        }}
-      />
       {/* Links scrim — tekst leesbaarheid */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -36,11 +31,11 @@ export default function Hero() {
           zIndex: 1,
         }}
       />
-      {/* Bodem scrim — diepte, vervaagt naar transparant */}
+      {/* Bodem scrim */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, transparent 0%, rgba(4,3,2,0.38) 14%, transparent 34%)',
+          background: 'linear-gradient(to top, rgba(4,3,2,0.62) 0%, rgba(4,3,2,0.06) 24%, transparent 44%)',
           zIndex: 1,
         }}
       />
