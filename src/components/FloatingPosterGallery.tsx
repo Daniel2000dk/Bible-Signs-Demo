@@ -5,23 +5,23 @@ import PosterCard3D from './PosterCard3D'
 import { heroPosters } from '@/data/heroPosters'
 
 const TOTAL = heroPosters.length
-const POSTER_W = 230
-const POSTER_H = 322
+const POSTER_W = 207
+const POSTER_H = 290
 
-// Cinematic snelheid — volle rotatie in ~124 seconden
+// Rustige cinematic rotatie
 const SPEED = 1 / 5200
 
 function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t
 }
 
-// 5 posters duidelijk zichtbaar, side posters minimale blur
+// Centrale posters dominant, zijkant subtieler — geen zware blur
 const KEYFRAMES = [
   { x: 0,   z: 0,    rotY: 0,  scale: 1.00, opacity: 1.00, blur: 0   },
-  { x: 255, z: -72,  rotY: 14, scale: 0.91, opacity: 0.86, blur: 0   },
-  { x: 468, z: -142, rotY: 25, scale: 0.80, opacity: 0.60, blur: 0   },
-  { x: 636, z: -202, rotY: 34, scale: 0.67, opacity: 0.22, blur: 0.7 },
-  { x: 758, z: -252, rotY: 41, scale: 0.56, opacity: 0.00, blur: 1.4 },
+  { x: 224, z: -64,  rotY: 13, scale: 0.90, opacity: 0.78, blur: 0   },
+  { x: 412, z: -126, rotY: 22, scale: 0.79, opacity: 0.50, blur: 0.3 },
+  { x: 560, z: -180, rotY: 31, scale: 0.66, opacity: 0.17, blur: 0.6 },
+  { x: 668, z: -224, rotY: 38, scale: 0.55, opacity: 0.00, blur: 1.0 },
 ]
 
 interface Transform {
@@ -91,8 +91,7 @@ export default function FloatingPosterGallery() {
         const tr = getTransform(offset)
         const opacity = Math.max(0, tr.opacity)
 
-        // Subtiel organisch zweven — gouden ratio voor niet-herhalend patroon
-        const floatY = Math.sin(now / 2800 + i * 0.618) * 5
+        const floatY = Math.sin(now / 3200 + i * 0.618) * 4
 
         el.style.transform = `translate(-50%, calc(-50% + ${floatY.toFixed(1)}px)) translateX(${tr.x.toFixed(1)}px) translateZ(${tr.z.toFixed(1)}px) rotateY(${tr.rotateY.toFixed(2)}deg) scale(${tr.scale.toFixed(3)})`
         el.style.opacity = opacity.toFixed(3)
@@ -108,23 +107,18 @@ export default function FloatingPosterGallery() {
   }, [])
 
   return (
-    <div
-      className="relative w-full"
-      style={{ perspective: '1400px' }}
-    >
-      {/* Carrousel podium */}
-      <div className="relative w-full" style={{ height: 400 }}>
+    <div className="relative w-full" style={{ perspective: '1400px' }}>
+      <div className="relative w-full" style={{ height: 370 }}>
 
-        {/* Ambient glow achter posters */}
+        {/* Subtiele ambient glow */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse 68% 55% at 50% 50%, rgba(200,168,75,0.055) 0%, rgba(200,168,75,0.012) 58%, transparent 75%)',
+              'radial-gradient(ellipse 60% 50% at 50% 52%, rgba(200,168,75,0.042) 0%, transparent 72%)',
             zIndex: 0,
           }}
         />
-
 
         {heroPosters.map((poster, index) => (
           <div
@@ -139,14 +133,13 @@ export default function FloatingPosterGallery() {
               opacity: 0,
               willChange: 'transform, opacity',
               pointerEvents: 'none',
-              boxShadow: '0 28px 72px rgba(0,0,0,0.60), 0 8px 22px rgba(0,0,0,0.38)',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.58), 0 6px 18px rgba(0,0,0,0.34)',
             }}
           >
             <PosterCard3D poster={poster} width={POSTER_W} height={POSTER_H} />
           </div>
         ))}
       </div>
-
     </div>
   )
 }
