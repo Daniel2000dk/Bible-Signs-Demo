@@ -68,11 +68,11 @@ export default function Hero() {
             paddingLeft: 'clamp(64px, 7.5vw, 116px)',
             paddingRight: 48,
             paddingTop: 112,
-            paddingBottom: 56,
+            paddingBottom: 48,
           }}
         >
           {/* Eyebrow */}
-          <div className="flex items-center gap-3" style={{ marginBottom: 28 }}>
+          <div className="flex items-center gap-3" style={{ marginBottom: 20 }}>
             <div
               style={{
                 width: 28,
@@ -103,7 +103,7 @@ export default function Hero() {
               lineHeight: 1.08,
               letterSpacing: '-0.022em',
               textShadow: '0 2px 36px rgba(0,0,0,0.80)',
-              marginBottom: 30,
+              marginBottom: 22,
             }}
           >
             Maak{' '}
@@ -128,7 +128,7 @@ export default function Hero() {
               lineHeight: 1.74,
               color: 'rgba(255,252,245,0.91)',
               maxWidth: 420,
-              marginBottom: 46,
+              marginBottom: 32,
               textShadow: '0 1px 14px rgba(0,0,0,0.60)',
             }}
           >
@@ -137,7 +137,7 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
-          <div className="flex items-center gap-6" style={{ marginBottom: 30 }}>
+          <div className="flex items-center gap-6" style={{ marginBottom: 22 }}>
             <Link
               href="#customizer"
               className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full font-bold tracking-wide transition-all duration-300 hover:-translate-y-[2px] hover:scale-[1.025]"

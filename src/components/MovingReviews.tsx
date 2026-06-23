@@ -206,72 +206,39 @@ export default function MovingReviews() {
         }}
       />
 
-      {/* Section header */}
-      <div className="max-w-[1320px] mx-auto px-6 md:px-10 mb-14">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      {/* Section header — compact */}
+      <div className="max-w-[1320px] mx-auto px-6 md:px-10 mb-7">
+        <div className="flex flex-col gap-3">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3">
+            <div style={{ width: 24, height: 1, background: 'linear-gradient(90deg, transparent, #C8A84B)', flexShrink: 0 }} />
+            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.30em', textTransform: 'uppercase', color: '#C8A84B' }}>
+              Ervaringen van klanten
+            </span>
+            <div style={{ width: 24, height: 1, background: 'linear-gradient(90deg, #C8A84B, transparent)', flexShrink: 0 }} />
+          </div>
 
-          <div className="flex flex-col gap-4 max-w-[560px]">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3">
-              <div
-                style={{
-                  width: 28,
-                  height: 1,
-                  background: 'linear-gradient(90deg, transparent 0%, #C8A84B 100%)',
-                  flexShrink: 0,
-                }}
-              />
-              <span
-                style={{
-                  fontSize: 9,
-                  fontWeight: 700,
-                  letterSpacing: '0.30em',
-                  textTransform: 'uppercase',
-                  color: '#C8A84B',
-                }}
-              >
-                Ervaringen van klanten
-              </span>
-              <div
-                style={{
-                  width: 28,
-                  height: 1,
-                  background: 'linear-gradient(90deg, #C8A84B 0%, transparent 100%)',
-                  flexShrink: 0,
-                }}
-              />
-            </div>
-
+          {/* Heading + CTA — één rij */}
+          <div className="flex items-end justify-between gap-6">
             <h2
-              className="font-serif font-bold text-[#F5F0E8] leading-[1.12]"
-              style={{ fontSize: 'clamp(26px, 3vw, 38px)' }}
+              className="font-serif font-bold text-[#F5F0E8]"
+              style={{ fontSize: 'clamp(20px, 2.2vw, 28px)', lineHeight: 1.18, maxWidth: 520 }}
             >
-              Gemaakt voor kamers waar
-              <br />
+              Gemaakt voor kamers waar{' '}
               <span style={{ color: '#C8A84B' }}>geloof</span>{' '}
               dagelijks zichtbaar mag zijn.
             </h2>
-
-            <p style={{ fontSize: 14, color: 'rgba(245,240,232,0.42)', lineHeight: 1.7, marginTop: 2 }}>
-              Echte ervaringen van de BibleSigns community.
-            </p>
-          </div>
-
-          {/* Desktop CTA */}
-          <Link
-            href="/collectie"
-            className="group hidden md:inline-flex items-center gap-2 shrink-0 mb-1 transition-colors duration-200 text-[rgba(200,168,75,0.70)] hover:text-[#C8A84B]"
-            style={{ fontSize: 13, fontWeight: 500 }}
-          >
-            Bekijk collectie
-            <svg
-              width="13" height="13" viewBox="0 0 14 14"
-              fill="none" stroke="currentColor" strokeWidth="1.8"
-              className="group-hover:translate-x-0.5 transition-transform"
+            <Link
+              href="/collectie"
+              className="group hidden md:inline-flex items-center gap-2 shrink-0 transition-colors duration-200 text-[rgba(200,168,75,0.70)] hover:text-[#C8A84B]"
+              style={{ fontSize: 13, fontWeight: 500 }}
             >
-              <path d="M2 7h10M7 2l5 5-5 5" />
-            </svg>
-          </Link>
+              Bekijk collectie
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.8" className="group-hover:translate-x-0.5 transition-transform">
+                <path d="M2 7h10M7 2l5 5-5 5" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
 
