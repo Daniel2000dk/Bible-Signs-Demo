@@ -13,12 +13,13 @@ export default function Hero() {
       className="relative overflow-hidden"
       style={{
         backgroundImage: "url('/hero-bg.jpg')",
-        backgroundSize: 'auto 82%',
-        backgroundPosition: '58% center',
+        backgroundSize: '92% auto',
+        backgroundPosition: '82% center',
         backgroundRepeat: 'no-repeat',
         backgroundColor: '#080604',
-        maskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
-        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
+        minHeight: '84vh',
+        maskImage: 'linear-gradient(to bottom, black 0%, black 95%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 95%, transparent 100%)',
       }}
     >
       {/* Links scrim — tekst leesbaarheid */}
