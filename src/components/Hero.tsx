@@ -16,8 +16,7 @@ export default function Hero() {
         backgroundSize: 'auto 82%',
         backgroundPosition: '58% center',
         backgroundRepeat: 'no-repeat',
-        backgroundColor: '#080604',
-        minHeight: '100vh',
+        minHeight: '88vh',
       }}
     >
       {/* Links scrim — tekst leesbaarheid */}
@@ -29,11 +28,11 @@ export default function Hero() {
           zIndex: 1,
         }}
       />
-      {/* Bodem scrim */}
+      {/* Bodem scrim — transparant aan de rand, piek middenin voor diepte */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, rgba(4,3,2,0.62) 0%, rgba(4,3,2,0.06) 24%, transparent 44%)',
+          background: 'linear-gradient(to top, transparent 0%, rgba(4,3,2,0.58) 15%, transparent 36%)',
           zIndex: 1,
         }}
       />
