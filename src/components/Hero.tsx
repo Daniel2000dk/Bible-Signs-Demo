@@ -12,9 +12,9 @@ export default function Hero() {
       id="home"
       className="relative overflow-hidden"
       style={{
-        backgroundImage: "url('/hero-bg.png')",
+        backgroundImage: "url('/hero-bg.jpg')",
         backgroundSize: 'cover',
-        backgroundPosition: 'center top',
+        backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         minHeight: '100vh',
       }}
@@ -24,25 +24,25 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(95deg, rgba(6,5,3,0.88) 0%, rgba(6,5,3,0.68) 32%, rgba(6,5,3,0.28) 58%, transparent 78%)',
+            'linear-gradient(90deg, rgba(4,3,2,0.92) 0%, rgba(4,3,2,0.80) 22%, rgba(4,3,2,0.50) 42%, rgba(4,3,2,0.12) 62%, transparent 76%)',
           zIndex: 1,
         }}
       />
-      {/* Onderste scrim — subtiel aarden */}
+      {/* Onderste scrim */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(to top, rgba(6,5,3,0.65) 0%, rgba(6,5,3,0.15) 30%, transparent 55%)',
+            'linear-gradient(to top, rgba(4,3,2,0.72) 0%, rgba(4,3,2,0.10) 28%, transparent 50%)',
           zIndex: 1,
         }}
       />
-      {/* Bovenste scrim — header-ruimte */}
+      {/* Bovenste scrim */}
       <div
         className="absolute inset-x-0 top-0 pointer-events-none"
         style={{
-          height: 160,
-          background: 'linear-gradient(to bottom, rgba(6,5,3,0.60) 0%, transparent 100%)',
+          height: 140,
+          background: 'linear-gradient(to bottom, rgba(4,3,2,0.55) 0%, transparent 100%)',
           zIndex: 1,
         }}
       />
