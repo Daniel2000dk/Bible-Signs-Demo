@@ -18,8 +18,6 @@ export default function Hero() {
         backgroundRepeat: 'no-repeat',
         backgroundColor: '#080604',
         minHeight: '100vh',
-        maskImage: 'linear-gradient(to bottom, black 0%, black 86%, transparent 100%)',
-        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 86%, transparent 100%)',
       }}
     >
       {/* Links scrim — tekst leesbaarheid */}

@@ -24,6 +24,17 @@ export default function Home() {
       <main className="overflow-x-hidden relative" style={{ zIndex: 1 }}>
         <Header />
         <Hero />
+        {/* Overgangszone hero → reviews: fade van hero-kleur naar aurora */}
+        <div
+          aria-hidden
+          className="relative pointer-events-none"
+          style={{
+            height: 90,
+            marginTop: -90,
+            zIndex: 2,
+            background: 'linear-gradient(to bottom, #080604 0%, transparent 100%)',
+          }}
+        />
         <MovingReviews />
         <BestSellers />
         <HoeHetWerkt />
