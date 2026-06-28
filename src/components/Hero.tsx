@@ -17,7 +17,7 @@ export default function Hero() {
         backgroundPosition: '82% center',
         backgroundRepeat: 'no-repeat',
         backgroundColor: '#080604',
-        minHeight: '84vh',
+        minHeight: '82vh',
         maskImage: 'linear-gradient(to bottom, black 0%, black 95%, transparent 100%)',
         WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 95%, transparent 100%)',
       }}
