@@ -1,101 +1,5 @@
 import Link from 'next/link'
 
-function MobilePosterCard({
-  category,
-  verse,
-  reference,
-  featured = false,
-}: {
-  category: string
-  verse: string
-  reference: string
-  accent: string
-  featured?: boolean
-}) {
-  return (
-    <div
-      style={{
-        background: featured
-          ? 'linear-gradient(160deg, #1A1408 0%, #0E0B04 100%)'
-          : 'linear-gradient(160deg, #141108 0%, #090704 100%)',
-        border: featured
-          ? '1px solid rgba(200,168,75,0.32)'
-          : '1px solid rgba(200,168,75,0.14)',
-        borderRadius: 8,
-        padding: featured ? '20px 14px' : '16px 11px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 10,
-        boxShadow: featured
-          ? '0 8px 40px rgba(0,0,0,0.70), 0 0 0 1px rgba(200,168,75,0.08)'
-          : '0 4px 20px rgba(0,0,0,0.60)',
-        aspectRatio: '2 / 3',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
-      {/* Subtiele achtergrond glow */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(200,168,75,0.06) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }}
-      />
-
-      {/* Dunne goud lijn bovenin */}
-      <div
-        style={{
-          width: '40%',
-          height: 1,
-          background: 'linear-gradient(90deg, #C8A84B, transparent)',
-          marginBottom: 4,
-        }}
-      />
-
-      {/* Categorie */}
-      <span
-        style={{
-          fontSize: featured ? 7 : 6.5,
-          fontWeight: 700,
-          letterSpacing: '0.24em',
-          textTransform: 'uppercase',
-          color: 'rgba(200,168,75,0.75)',
-        }}
-      >
-        {category}
-      </span>
-
-      {/* Vers */}
-      <p
-        style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          fontStyle: 'italic',
-          fontSize: featured ? 11 : 9.5,
-          lineHeight: 1.58,
-          color: 'rgba(245,240,232,0.90)',
-          flex: 1,
-        }}
-      >
-        &ldquo;{verse}&rdquo;
-      </p>
-
-      {/* Referentie */}
-      <span
-        style={{
-          fontSize: featured ? 8 : 7,
-          fontWeight: 600,
-          letterSpacing: '0.16em',
-          color: 'rgba(200,168,75,0.65)',
-        }}
-      >
-        — {reference}
-      </span>
-    </div>
-  )
-}
-
 const trustPoints = [
   'Gratis verzending boven €50',
   '30 dagen retour',
@@ -337,96 +241,45 @@ export default function Hero() {
 
       {/* ═══════════════════════════════════════
           MOBIELE HERO (kleiner dan lg)
-          Top: 3 poster mockups in fan-spread
-          Bottom: headline + CTA
+          Achtergrond: hero-bg.jpg gecentreerd
+          Korter zodat social proof direct zichtbaar
       ═══════════════════════════════════════ */}
       <section
         id="home-mobile"
-        className="lg:hidden relative overflow-hidden flex flex-col"
+        className="lg:hidden relative overflow-hidden flex flex-col justify-end"
         style={{
+          backgroundImage: "url('/hero-bg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: '55% center',
+          backgroundRepeat: 'no-repeat',
           backgroundColor: '#070503',
-          minHeight: '100svh',
-          maskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
+          minHeight: '88svh',
+          maskImage: 'linear-gradient(to bottom, black 0%, black 90%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 90%, transparent 100%)',
         }}
       >
-        {/* Subtiele aurora-achtige glow achtergrond */}
+        {/* Donkere overlay van onderaf — tekst leesbaarheid */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse 80% 50% at 50% 30%, rgba(58,44,14,0.55) 0%, rgba(30,20,5,0.30) 50%, transparent 80%)',
+            background: 'linear-gradient(to top, rgba(4,3,2,0.97) 0%, rgba(4,3,2,0.82) 25%, rgba(4,3,2,0.35) 52%, rgba(4,3,2,0.08) 72%, transparent 100%)',
+            zIndex: 1,
+          }}
+        />
+        {/* Boven scrim — navbar */}
+        <div
+          className="absolute inset-x-0 top-0 pointer-events-none"
+          style={{
+            height: 160,
+            background: 'linear-gradient(to bottom, rgba(4,3,2,0.72) 0%, rgba(4,3,2,0.28) 50%, transparent 100%)',
+            zIndex: 1,
           }}
         />
 
-        {/* ── 3 Poster mockups — fan spread ── */}
-        <div
-          className="relative flex items-end justify-center"
-          style={{ paddingTop: 100, paddingBottom: 32, paddingLeft: 20, paddingRight: 20 }}
-        >
-          {/* Links poster — licht gekanteld */}
-          <div
-            className="shrink-0"
-            style={{
-              width: '30%',
-              maxWidth: 110,
-              transform: 'rotate(-7deg) translateY(12px)',
-              transformOrigin: 'bottom center',
-              zIndex: 1,
-              marginRight: -8,
-            }}
-          >
-            <MobilePosterCard
-              category="IDENTITEIT"
-              verse="Wie in Christus is, is een nieuwe schepping."
-              reference="2 Kor. 5:17"
-              accent="#C8A84B"
-            />
-          </div>
-
-          {/* Midden poster — rechtop, iets groter */}
-          <div
-            className="shrink-0"
-            style={{
-              width: '36%',
-              maxWidth: 136,
-              transform: 'translateY(-8px)',
-              zIndex: 3,
-            }}
-          >
-            <MobilePosterCard
-              category="RUST & VREDE"
-              verse="De HEER is mijn herder, het ontbreekt mij aan niets."
-              reference="Psalm 23:1"
-              accent="#C8A84B"
-              featured
-            />
-          </div>
-
-          {/* Rechts poster — licht gekanteld */}
-          <div
-            className="shrink-0"
-            style={{
-              width: '30%',
-              maxWidth: 110,
-              transform: 'rotate(7deg) translateY(12px)',
-              transformOrigin: 'bottom center',
-              zIndex: 1,
-              marginLeft: -8,
-            }}
-          >
-            <MobilePosterCard
-              category="MOED & KRACHT"
-              verse="Wees sterk en moedig. Ik ben met u."
-              reference="Jozua 1:9"
-              accent="#C8A84B"
-            />
-          </div>
-        </div>
-
         {/* ── Tekst content + CTA ── */}
         <div
-          className="relative flex flex-col flex-1 justify-end animate-fade-up"
-          style={{ padding: '0 28px 44px' }}
+          className="relative flex flex-col animate-fade-up"
+          style={{ padding: '0 28px 36px', zIndex: 2 }}
         >
           {/* Eyebrow */}
           <div className="flex items-center gap-2.5" style={{ marginBottom: 14 }}>
