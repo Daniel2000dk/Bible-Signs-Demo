@@ -1,5 +1,101 @@
 import Link from 'next/link'
 
+function MobilePosterCard({
+  category,
+  verse,
+  reference,
+  featured = false,
+}: {
+  category: string
+  verse: string
+  reference: string
+  accent: string
+  featured?: boolean
+}) {
+  return (
+    <div
+      style={{
+        background: featured
+          ? 'linear-gradient(160deg, #1A1408 0%, #0E0B04 100%)'
+          : 'linear-gradient(160deg, #141108 0%, #090704 100%)',
+        border: featured
+          ? '1px solid rgba(200,168,75,0.32)'
+          : '1px solid rgba(200,168,75,0.14)',
+        borderRadius: 8,
+        padding: featured ? '20px 14px' : '16px 11px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 10,
+        boxShadow: featured
+          ? '0 8px 40px rgba(0,0,0,0.70), 0 0 0 1px rgba(200,168,75,0.08)'
+          : '0 4px 20px rgba(0,0,0,0.60)',
+        aspectRatio: '2 / 3',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Subtiele achtergrond glow */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(200,168,75,0.06) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* Dunne goud lijn bovenin */}
+      <div
+        style={{
+          width: '40%',
+          height: 1,
+          background: 'linear-gradient(90deg, #C8A84B, transparent)',
+          marginBottom: 4,
+        }}
+      />
+
+      {/* Categorie */}
+      <span
+        style={{
+          fontSize: featured ? 7 : 6.5,
+          fontWeight: 700,
+          letterSpacing: '0.24em',
+          textTransform: 'uppercase',
+          color: 'rgba(200,168,75,0.75)',
+        }}
+      >
+        {category}
+      </span>
+
+      {/* Vers */}
+      <p
+        style={{
+          fontFamily: "'Playfair Display', Georgia, serif",
+          fontStyle: 'italic',
+          fontSize: featured ? 11 : 9.5,
+          lineHeight: 1.58,
+          color: 'rgba(245,240,232,0.90)',
+          flex: 1,
+        }}
+      >
+        &ldquo;{verse}&rdquo;
+      </p>
+
+      {/* Referentie */}
+      <span
+        style={{
+          fontSize: featured ? 8 : 7,
+          fontWeight: 600,
+          letterSpacing: '0.16em',
+          color: 'rgba(200,168,75,0.65)',
+        }}
+      >
+        — {reference}
+      </span>
+    </div>
+  )
+}
+
 const trustPoints = [
   'Gratis verzending boven €50',
   '30 dagen retour',
@@ -241,51 +337,99 @@ export default function Hero() {
 
       {/* ═══════════════════════════════════════
           MOBIELE HERO (kleiner dan lg)
-          Volledig scherm — poster als cover,
-          content onderaan gepind
+          Top: 3 poster mockups in fan-spread
+          Bottom: headline + CTA
       ═══════════════════════════════════════ */}
       <section
         id="home-mobile"
-        className="lg:hidden relative overflow-hidden flex flex-col justify-end"
+        className="lg:hidden relative overflow-hidden flex flex-col"
         style={{
-          backgroundImage: "url('/hero-bg.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 20%',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#080604',
+          backgroundColor: '#070503',
           minHeight: '100svh',
           maskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
         }}
       >
-        {/* Donkere overlay van onderaf — tekst leesbaarheid */}
+        {/* Subtiele aurora-achtige glow achtergrond */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'linear-gradient(to top, rgba(4,3,2,0.97) 0%, rgba(4,3,2,0.85) 28%, rgba(4,3,2,0.40) 55%, rgba(4,3,2,0.10) 75%, transparent 100%)',
-            zIndex: 1,
-          }}
-        />
-        {/* Boven scrim — navbar */}
-        <div
-          className="absolute inset-x-0 top-0 pointer-events-none"
-          style={{
-            height: 160,
-            background: 'linear-gradient(to bottom, rgba(4,3,2,0.72) 0%, rgba(4,3,2,0.30) 50%, transparent 100%)',
-            zIndex: 1,
+            background: 'radial-gradient(ellipse 80% 50% at 50% 30%, rgba(58,44,14,0.55) 0%, rgba(30,20,5,0.30) 50%, transparent 80%)',
           }}
         />
 
-        {/* Content — onderaan */}
+        {/* ── 3 Poster mockups — fan spread ── */}
         <div
-          className="relative flex flex-col animate-fade-up"
-          style={{
-            zIndex: 2,
-            padding: '0 28px 44px',
-          }}
+          className="relative flex items-end justify-center"
+          style={{ paddingTop: 100, paddingBottom: 32, paddingLeft: 20, paddingRight: 20 }}
+        >
+          {/* Links poster — licht gekanteld */}
+          <div
+            className="shrink-0"
+            style={{
+              width: '30%',
+              maxWidth: 110,
+              transform: 'rotate(-7deg) translateY(12px)',
+              transformOrigin: 'bottom center',
+              zIndex: 1,
+              marginRight: -8,
+            }}
+          >
+            <MobilePosterCard
+              category="IDENTITEIT"
+              verse="Wie in Christus is, is een nieuwe schepping."
+              reference="2 Kor. 5:17"
+              accent="#C8A84B"
+            />
+          </div>
+
+          {/* Midden poster — rechtop, iets groter */}
+          <div
+            className="shrink-0"
+            style={{
+              width: '36%',
+              maxWidth: 136,
+              transform: 'translateY(-8px)',
+              zIndex: 3,
+            }}
+          >
+            <MobilePosterCard
+              category="RUST & VREDE"
+              verse="De HEER is mijn herder, het ontbreekt mij aan niets."
+              reference="Psalm 23:1"
+              accent="#C8A84B"
+              featured
+            />
+          </div>
+
+          {/* Rechts poster — licht gekanteld */}
+          <div
+            className="shrink-0"
+            style={{
+              width: '30%',
+              maxWidth: 110,
+              transform: 'rotate(7deg) translateY(12px)',
+              transformOrigin: 'bottom center',
+              zIndex: 1,
+              marginLeft: -8,
+            }}
+          >
+            <MobilePosterCard
+              category="MOED & KRACHT"
+              verse="Wees sterk en moedig. Ik ben met u."
+              reference="Jozua 1:9"
+              accent="#C8A84B"
+            />
+          </div>
+        </div>
+
+        {/* ── Tekst content + CTA ── */}
+        <div
+          className="relative flex flex-col flex-1 justify-end animate-fade-up"
+          style={{ padding: '0 28px 44px' }}
         >
           {/* Eyebrow */}
-          <div className="flex items-center gap-2.5" style={{ marginBottom: 16 }}>
+          <div className="flex items-center gap-2.5" style={{ marginBottom: 14 }}>
             <div
               style={{
                 width: 20,
@@ -312,20 +456,14 @@ export default function Hero() {
             className="font-bold text-white"
             style={{
               fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif",
-              fontSize: 'clamp(38px, 10vw, 52px)',
+              fontSize: 'clamp(36px, 9.5vw, 50px)',
               lineHeight: 1.08,
               letterSpacing: '-0.02em',
-              textShadow: '0 2px 28px rgba(0,0,0,0.90)',
-              marginBottom: 14,
+              marginBottom: 12,
             }}
           >
             Maak{' '}
-            <span
-              style={{
-                color: '#F5E070',
-                textShadow: '0 0 32px rgba(245,224,112,0.45), 0 2px 16px rgba(0,0,0,0.70)',
-              }}
-            >
+            <span style={{ color: '#F5E070', textShadow: '0 0 28px rgba(245,224,112,0.40)' }}>
               Gods Woord
             </span>
             <br />
@@ -337,19 +475,18 @@ export default function Hero() {
           {/* Subtekst */}
           <p
             style={{
-              fontSize: 15,
-              lineHeight: 1.68,
-              color: 'rgba(255,252,245,0.78)',
-              maxWidth: 340,
-              marginBottom: 28,
-              textShadow: '0 1px 12px rgba(0,0,0,0.70)',
+              fontSize: 14.5,
+              lineHeight: 1.65,
+              color: 'rgba(255,252,245,0.68)',
+              marginBottom: 26,
             }}
           >
-            Premium Bijbelse posters die Gods Woord zichtbaar maken in jouw kamer.
+            Premium Bijbelse posters die Gods Woord<br />
+            zichtbaar maken in jouw kamer.
           </p>
 
           {/* CTA's */}
-          <div className="flex flex-col gap-3" style={{ marginBottom: 24 }}>
+          <div className="flex flex-col gap-3" style={{ marginBottom: 22 }}>
             <Link
               href="#customizer"
               className="group relative inline-flex items-center justify-center gap-2.5 overflow-hidden rounded-full font-bold tracking-wide transition-all duration-300 active:scale-[0.97]"
@@ -368,16 +505,10 @@ export default function Hero() {
                 <path d="M2 7h10M7 2l5 5-5 5" />
               </svg>
             </Link>
-
             <Link
               href="/collectie"
               className="inline-flex items-center justify-center gap-2 font-medium"
-              style={{
-                fontSize: 14,
-                color: 'rgba(255,252,245,0.62)',
-                height: 44,
-                textShadow: '0 1px 8px rgba(0,0,0,0.55)',
-              }}
+              style={{ fontSize: 14, color: 'rgba(255,252,245,0.55)', height: 40 }}
             >
               Bekijk collectie
               <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.9">
@@ -386,7 +517,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* USP's — gestapeld op mobiel */}
+          {/* USP's */}
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             {trustPoints.map(point => (
               <div key={point} className="flex items-center gap-2">
@@ -398,15 +529,7 @@ export default function Hero() {
                     <path d="M2 5l2.5 2.5 3.5-4" stroke="#C8A84B" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span
-                  style={{
-                    fontSize: 12,
-                    color: 'rgba(255,252,245,0.70)',
-                    textShadow: '0 1px 6px rgba(0,0,0,0.55)',
-                  }}
-                >
-                  {point}
-                </span>
+                <span style={{ fontSize: 12, color: 'rgba(255,252,245,0.60)' }}>{point}</span>
               </div>
             ))}
           </div>
